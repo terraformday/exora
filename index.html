@@ -174,6 +174,14 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex .bub{display:inline-block;font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:clamp(1.3rem,2.2vw,1.8rem);line-height:1.2;color:#1D3557;padding:1rem 1.4rem;max-width:88%;border-radius:24px 24px 24px 6px;border:1.5px solid var(--ink)}
 .ex .bub:nth-child(2){align-self:flex-end;border-radius:24px 24px 6px 24px}
 @media (max-width:780px){.ex .myth{grid-template-columns:minmax(0,1fr);padding:3rem 1.4rem;gap:1.6rem}}
+.ex .print{margin:0;background:#FFFBF3;padding:12px 12px 0;border:1.5px solid var(--ink);border-radius:10px;box-shadow:8px 10px 0 rgba(29,53,87,.14)}
+.ex .print img{display:block;width:100%;height:auto;border-radius:4px;filter:saturate(.92) contrast(1.02) sepia(.08)}
+.ex .print figcaption{display:block;text-align:center;font-size:1.25rem;padding:.5rem 0 .7rem;transform:none}
+.ex .prints{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:2.6rem 0 1rem;max-width:460px}
+.ex .prints .p1{transform:rotate(-4deg);z-index:1}
+.ex .prints .p2{transform:rotate(3deg) translate(-14px,34px);z-index:2}
+.ex .print.wide{max-width:560px;margin:0 auto 2.6rem;transform:rotate(-1.5deg)}
+@media (max-width:780px){.ex .prints{max-width:340px;margin:2rem auto 2.6rem}.ex .print.wide{max-width:340px}}
 .ex .story{border-top:1.5px dashed var(--ink)}
 .ex .story h2{font-size:clamp(2.4rem,4.5vw,3.6rem)}
 .ex .why .list h3{font-size:1.6rem}
@@ -239,6 +247,10 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <div>
 <p class="pq">The late-night talks. The goodbyes. The rooms that become yours.</p>
 <p class="margin" style="color: #4F6482">Exora is written by residents, nomads and hosts, and printed as an A5 magazine, so you can still pack it with you.</p>
+<div class="prints">
+<figure class="print p1"><img src="shoes.jpg" alt="A jumble of shoes, sandals and trainers at the front door of a shared house" width="720" height="900"><figcaption class="hand">Everyone's home tonight</figcaption></figure>
+<figure class="print p2"><img src="pancakes.jpg" alt="Stacks of pancakes on a plate on a wooden table in morning light, with flowers in a jug" width="720" height="900"><figcaption class="hand">Pancakes, made to share</figcaption></figure>
+</div>
 </div>
 <div>
 <div class="cols">
@@ -265,6 +277,7 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <span class="hand">Readers &amp; storytellers</span>
 <h2 id="house-h">Like in every memorable coliving, no one is just a guest. Everyone co-creates the experience.</h2>
 <p class="hlead">Exora works the same way. The people who read it are the people who write it, photograph it, draw it and decide what goes in. You're not just a subscriber.</p>
+<figure class="print wide"><img src="dinner2.jpg" alt="A candlelit dinner table at Selgars Mill: plates of stuffed peppers, white carnations in a jug, a glass of red wine and hands reaching across" width="900" height="720"><figcaption class="hand">Dinner at Selgars Mill</figcaption></figure>
 <ul class="roles">
 <li><b>You write</b>the stories</li>
 <li><b>You shoot</b>the photos</li>

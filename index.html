@@ -104,7 +104,7 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex .adhead{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2.4rem;align-items:end;margin-bottom:2.6rem}
 .ex .adhead h2{font-size:clamp(2.4rem,4.5vw,3.6rem);margin-top:.4rem;text-decoration:underline wavy var(--coral) 2.5px;text-underline-offset:.2em;text-decoration-skip-ink:none}
 .ex .reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
-.ex .reasons>div{border:1.5px solid var(--ink);border-radius:28px;padding:1.6rem 1.4rem}
+.ex .reasons>div,.ex .reasons>details{border:1.5px solid var(--ink);border-radius:28px;padding:1.6rem 1.4rem}
 .ex .reasons .n{font-family:"Caveat",cursive;font-weight:600;font-size:1.6rem;color:#C2412D;line-height:1}
 .ex .reasons h3{font-size:1.45rem;margin:.4rem 0 .5rem}
 .ex .reasons p{margin:0;font-size:.98rem;line-height:1.6}
@@ -135,6 +135,19 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex .support .price .k{font-size:.7rem;letter-spacing:.08em}
 .ex .support .price .amt{font-size:2.2rem}
 .ex .support .price p{font-size:.88rem;line-height:1.45}
+}
+.ex .fold>summary{list-style:none;cursor:default}
+.ex .fold>summary::-webkit-details-marker{display:none}
+@media (max-width:780px){
+.ex .fold>summary{cursor:pointer;-webkit-tap-highlight-color:transparent;display:flex;align-items:center;gap:.8rem;min-height:44px}
+.ex .fold>summary h3{flex:1;margin:0}
+.ex .fold>summary::after{content:"+";font-family:"DM Sans",Arial,sans-serif;font-size:1.5rem;line-height:1;width:1.9rem;height:1.9rem;display:grid;place-items:center;border:1.5px solid currentColor;border-radius:50%;flex:none}
+.ex .fold[open]>summary::after{content:"\2013"}
+.ex .fold[open]>summary{margin-bottom:.6rem}
+.ex .grid>details{border-bottom:1px solid rgba(255,244,224,.25);padding-bottom:.6rem}
+.ex .reasons>details{padding:1.1rem 1.2rem}
+.ex .reasons .n{font-size:1.3rem}
+.ex .grid{gap:1.6rem}
 }
 .ex .story{border-top:1.5px dashed var(--ink)}
 .ex .story h2{font-size:clamp(2.4rem,4.5vw,3.6rem)}
@@ -255,18 +268,18 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <li><span>Cover art</span><span>A5, portrait</span></li>
 </ul>
 </div>
-<div>
-<h3>How to pitch</h3>
+<details class="fold" open>
+<summary><h3>How to pitch</h3></summary>
 <p>Email a 2 to 3 sentence summary of your idea, or your full draft as a Google Doc or PDF.</p>
 <p>Add a short bio, such as "digital nomad currently in Lisbon" or "co-founder of a 10-person coliving space in rural Spain".</p>
 <p>For photos, share a link to a folder of low-res previews.</p>
 <p>For cover art, send a rough sketch or idea of how you'd picture life in a shared home.</p>
-</div>
-<div>
-<h3>In return</h3>
+</details>
+<details class="fold" open>
+<summary><h3>In return</h3></summary>
 <p>Exora is independent and self-funded, made in spare time, so we can't pay in money yet. Not even to ourselves. <br>We can offer you a printed copy, promotion across our network, and sincere gratitude. We promise that if we ever make any money, you'll be the first to know.&nbsp;</p>
 <p>Issue 01 is out in January 2027.</p>
-</div>
+</details>
 </div>
 <div style="margin-top: 2.6rem; border: 1.5px dashed #F4B63F; border-radius: 28px; padding: 1.8rem; display: flex; flex-wrap: wrap; gap: 1.4rem 2.4rem; align-items: center; justify-content: space-between">
 <div style="flex: 1 1 380px">
@@ -394,16 +407,16 @@ a{color:#1D3557}a:hover{color:#C2412D}
 </div>
 </div>
 <div class="reasons">
-<div><span class="n">01</span><h3>A hard-to-reach audience</h3><p>Remote workers, digital nomads and the hosts who run their houses. They move every few weeks, so they rarely see the same billboard twice. The US alone has 18.5 million digital nomads, staying 6.4 weeks per place on average (MBO Partners, 2025).</p></div>
-<div><span class="n">02</span><h3>One copy, a whole house of readers</h3><p>Exora lives on the coffee tables of partner coliving spaces, picked up by every resident who passes through for weeks after it arrives. That's a reach no social post can match.</p></div>
-<div><span class="n">03</span><h3>Undivided attention</h3><p>A printed A5 magazine that people keep, read slowly and pass on. With four ads per issue at most, yours never fights for space.</p></div>
-<div><span class="n">04</span><h3>In good company</h3><p>We only feature products and services our readers genuinely need. Never cigarettes, alcohol, food or beauty.</p></div>
+<details class="fold" open><summary><span class="n">01</span><h3>A hard-to-reach audience</h3></summary><p>Remote workers, digital nomads and the hosts who run their houses. They move every few weeks, so they rarely see the same billboard twice. The US alone has 18.5 million digital nomads, staying 6.4 weeks per place on average (MBO Partners, 2025).</p></details>
+<details class="fold" open><summary><span class="n">02</span><h3>One copy, a whole house of readers</h3></summary><p>Exora lives on the coffee tables of partner coliving spaces, picked up by every resident who passes through for weeks after it arrives. That's a reach no social post can match.</p></details>
+<details class="fold" open><summary><span class="n">03</span><h3>Undivided attention</h3></summary><p>A printed A5 magazine that people keep, read slowly and pass on. With four ads per issue at most, yours never fights for space.</p></details>
+<details class="fold" open><summary><span class="n">04</span><h3>In good company</h3></summary><p>We only feature products and services our readers genuinely need. Never cigarettes, alcohol, food or beauty.</p></details>
 </div>
 <div class="adfoot">
-<div>
-<h3>A natural fit for</h3>
+<details class="fold" open>
+<summary><h3>A natural fit for</h3></summary>
 <p>Travel and health insurance, banking and money transfers, coworking and coliving operators, luggage and travel gear, language learning, visa and relocation services, remote job boards, and anything else that makes life in motion a little easier.</p>
-</div>
+</details>
 <div>
 <h3>Who Exora reaches</h3>
 <ul class="facts" style="margin: 0">
@@ -459,6 +472,20 @@ a{color:#1D3557}a:hover{color:#C2412D}
     el.addEventListener("click", function(){ show(k); });
     el.addEventListener("mouseleave", function(){ hide(k); });
     el.addEventListener("blur", function(){ hide(k); });
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  var mq = window.matchMedia("(max-width:780px)");
+  var folds = document.querySelectorAll("details.fold");
+  function apply(){ folds.forEach(function(d){ d.open = !mq.matches; }); }
+  apply();
+  if (mq.addEventListener) mq.addEventListener("change", apply); else mq.addListener(apply);
+  document.querySelectorAll("details.fold > summary").forEach(function(s){
+    s.addEventListener("click", function(e){ if (!mq.matches) e.preventDefault(); });
   });
 })();
 </script>

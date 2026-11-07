@@ -182,6 +182,13 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex .prints .p2{transform:rotate(3deg) translateY(18px);z-index:2}
 .ex .print.wide{max-width:420px;margin:0 auto 2.6rem;transform:rotate(-1.5deg)}
 @media (max-width:780px){.ex .prints{max-width:340px;gap:0;margin:2rem auto 2.6rem}.ex .prints .p2{transform:rotate(3deg) translate(-14px,34px)}.ex .print.wide{max-width:300px}}
+.ex .vignettes{display:flex;justify-content:center;align-items:flex-start;gap:1.6rem;flex-wrap:wrap;max-width:900px;margin:0 auto 2.8rem}
+.ex .vignettes .print{width:min(260px,100%);flex:0 1 260px}
+.ex .vignettes .v1{transform:rotate(-3deg)}
+.ex .vignettes .v2{transform:rotate(1.5deg) translateY(14px)}
+.ex .vignettes .v3{transform:rotate(-1deg)}
+.ex .vignettes figcaption{font-size:1.15rem}
+@media (max-width:780px){.ex .vignettes{gap:.9rem}.ex .vignettes .print{flex:0 1 46%;padding:8px 8px 0}.ex .vignettes .v2{transform:rotate(1.5deg)}.ex .vignettes figcaption{font-size:1rem}}
 .ex .story{border-top:1.5px dashed var(--ink)}
 .ex .story h2{font-size:clamp(2.4rem,4.5vw,3.6rem)}
 .ex .why .list h3{font-size:1.6rem}
@@ -255,10 +262,6 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <p>You don't need to be a writer to have a story.&nbsp;<br>You don't even need to spell it out, we welcome art pieces and photography too.</p>
 </div>
 <a class="hand" href="about.html" style="text-decoration: none; margin-top: 1rem; display: inline-block">Read how Exora was born, at a dinner table →</a>
-<div class="prints">
-<figure class="print p1"><img src="shoes.jpg" alt="A jumble of shoes, sandals and trainers at the front door of a shared house" width="720" height="900"><figcaption class="hand">Everyone's home tonight</figcaption></figure>
-<figure class="print p2"><img src="pancakes.jpg" alt="Stacks of pancakes on a plate on a wooden table in morning light, with flowers in a jug" width="720" height="900"><figcaption class="hand">Pancakes, made to share</figcaption></figure>
-</div>
 </div>
 </section>
 
@@ -277,7 +280,11 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <span class="hand">Readers &amp; storytellers</span>
 <h2 id="house-h">Like in every memorable coliving, no one is just a guest. Everyone co-creates the experience.</h2>
 <p class="hlead">Exora works the same way. The people who read it are the people who write it, photograph it, draw it and decide what goes in. You're not just a subscriber.</p>
-<figure class="print wide"><img src="cooking.jpg" alt="Two friends cooking together in the kitchen at Selgars Mill, cutting potatoes beside bowls of onions and mushrooms" width="720" height="900"><figcaption class="hand">Cooking together at Selgars Mill</figcaption></figure>
+<div class="vignettes">
+<figure class="print v1"><img src="shoes.jpg" alt="A jumble of shoes, sandals and trainers at the front door of a shared house" width="720" height="900"><figcaption class="hand">Everyone's home tonight</figcaption></figure>
+<figure class="print v2"><img src="cooking.jpg" alt="Two friends cooking together in the kitchen at Selgars Mill, cutting potatoes beside bowls of onions and mushrooms" width="720" height="900"><figcaption class="hand">Cooking together</figcaption></figure>
+<figure class="print v3"><img src="pancakes.jpg" alt="Stacks of pancakes on a plate on a wooden table in morning light, with flowers in a jug" width="720" height="900"><figcaption class="hand">Pancakes, made to share</figcaption></figure>
+</div>
 <ul class="roles">
 <li><b>You write</b>the stories</li>
 <li><b>You shoot</b>the photos</li>

@@ -177,11 +177,11 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex .print{margin:0;background:#FFFBF3;padding:12px 12px 0;border:1.5px solid var(--ink);border-radius:10px;box-shadow:8px 10px 0 rgba(29,53,87,.14)}
 .ex .print img{display:block;width:100%;height:auto;border-radius:4px;filter:saturate(.92) contrast(1.02) sepia(.08)}
 .ex .print figcaption{display:block;text-align:center;font-size:1.25rem;padding:.5rem 0 .7rem;transform:none}
-.ex .prints{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:2.6rem 0 1rem;max-width:460px}
+.ex .prints{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem;margin:2.4rem 0 1rem;max-width:500px}
 .ex .prints .p1{transform:rotate(-4deg);z-index:1}
-.ex .prints .p2{transform:rotate(3deg) translate(-14px,34px);z-index:2}
+.ex .prints .p2{transform:rotate(3deg) translateY(18px);z-index:2}
 .ex .print.wide{max-width:560px;margin:0 auto 2.6rem;transform:rotate(-1.5deg)}
-@media (max-width:780px){.ex .prints{max-width:340px;margin:2rem auto 2.6rem}.ex .print.wide{max-width:340px}}
+@media (max-width:780px){.ex .prints{max-width:340px;gap:0;margin:2rem auto 2.6rem}.ex .prints .p2{transform:rotate(3deg) translate(-14px,34px)}.ex .print.wide{max-width:340px}}
 .ex .story{border-top:1.5px dashed var(--ink)}
 .ex .story h2{font-size:clamp(2.4rem,4.5vw,3.6rem)}
 .ex .why .list h3{font-size:1.6rem}
@@ -247,10 +247,6 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <div>
 <p class="pq">The late-night talks. The goodbyes. The rooms that become yours.</p>
 <p class="margin" style="color: #4F6482">Exora is written by residents, nomads and hosts, and printed as an A5 magazine, so you can still pack it with you.</p>
-<div class="prints">
-<figure class="print p1"><img src="shoes.jpg" alt="A jumble of shoes, sandals and trainers at the front door of a shared house" width="720" height="900"><figcaption class="hand">Everyone's home tonight</figcaption></figure>
-<figure class="print p2"><img src="pancakes.jpg" alt="Stacks of pancakes on a plate on a wooden table in morning light, with flowers in a jug" width="720" height="900"><figcaption class="hand">Pancakes, made to share</figcaption></figure>
-</div>
 </div>
 <div>
 <div class="cols">
@@ -259,6 +255,10 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <p>You don't need to be a writer to have a story.&nbsp;<br>You don't even need to spell it out, we welcome art pieces and photography too.</p>
 </div>
 <a class="hand" href="about.html" style="text-decoration: none; margin-top: 1rem; display: inline-block">Read how Exora was born, at a dinner table →</a>
+<div class="prints">
+<figure class="print p1"><img src="shoes.jpg" alt="A jumble of shoes, sandals and trainers at the front door of a shared house" width="720" height="900"><figcaption class="hand">Everyone's home tonight</figcaption></figure>
+<figure class="print p2"><img src="pancakes.jpg" alt="Stacks of pancakes on a plate on a wooden table in morning light, with flowers in a jug" width="720" height="900"><figcaption class="hand">Pancakes, made to share</figcaption></figure>
+</div>
 </div>
 </section>
 

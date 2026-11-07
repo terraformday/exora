@@ -123,6 +123,19 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex .mock figcaption{position:absolute;left:50%;bottom:-3.6rem;transform:translateX(-50%) rotate(-3deg);white-space:nowrap;font-size:1.4rem}
 @media (max-width:780px){.ex .suptop{grid-template-columns:minmax(0,1fr);gap:1rem}.ex .mock{width:240px;height:340px;margin:1rem auto 4rem}.ex .mock .scale{transform:scale(.4286)}.ex .mock figcaption{font-size:1.2rem;bottom:-3.2rem}}
 @media (prefers-reduced-motion:reduce){.ex .mock .front{transition:none}.ex .mock:hover .front{transform:rotate(-3deg)}}
+.ex .tap{display:none}
+@media (hover:none),(pointer:coarse){.ex .hov{display:none}.ex .tap{display:inline}}
+@media (max-width:780px){
+.ex .cover .iss{display:none}
+.ex .cover .sticker{top:3.6rem}
+.ex .spread>div:first-child{padding-bottom:0}
+.ex .toc .pg{display:none}
+.ex .support .prices{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.ex .support .price{padding:1.2rem 1rem;border-radius:22px}
+.ex .support .price .k{font-size:.7rem;letter-spacing:.08em}
+.ex .support .price .amt{font-size:2.2rem}
+.ex .support .price p{font-size:.88rem;line-height:1.45}
+}
 .ex .story{border-top:1.5px dashed var(--ink)}
 .ex .story h2{font-size:clamp(2.4rem,4.5vw,3.6rem)}
 .ex .why .list h3{font-size:1.6rem}
@@ -156,7 +169,7 @@ a{color:#1D3557}a:hover{color:#C2412D}
 </nav>
 
 <header class="cover">
-<div class="top"><span>An independent magazine for people who share a fridge</span><span>Issue 01</span></div>
+<div class="top"><span>An independent magazine for people who share a fridge</span><span class="iss">Issue 01</span></div>
 <div class="sticker" aria-hidden="true"><span>Open for stories!</span></div>
 <h1>Exo<i>ra</i></h1>
 <div class="scene">
@@ -169,12 +182,12 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <g class="item" tabindex="0" aria-label="Moka coffee pot" data-tip="moka"><path d="M304 262h26q16 0 16 20v22q0 12-14 12h-30" fill="#1D3557"></path><path d="M240 380l8-58h48l8 58z" fill="#DCE6EE"></path><path d="M248 322l-10-68h68l-10 68z" fill="#DCE6EE"></path><path d="M238 254l6-18h60l6 18z" fill="#DCE6EE"></path><path d="M238 254l-14-10 20-8z" fill="#DCE6EE"></path><rect x="269" y="230" width="6" height="6" fill="#1D3557"></rect><circle cx="272" cy="224" r="8" fill="#1D3557"></circle><path style="stroke-width:1.5" d="M262 322l-4 58M282 322l4 58M262 254l-2 68M282 254l2 68M248 322h48"></path></g>
 <g class="item" tabindex="0" aria-label="Plug adapter" data-tip="plug"><rect x="358" y="300" width="58" height="80" fill="transparent" stroke="none"></rect><rect x="372" y="310" width="8" height="26" fill="#F4B63F"></rect><rect x="394" y="310" width="8" height="26" fill="#F4B63F"></rect><rect x="362" y="334" width="50" height="46" rx="8" fill="#FFF4E0"></rect><rect x="376" y="354" width="22" height="9" rx="4.5" fill="#EF7B67"></rect></g></g></svg>
 <div class="tip" id="shelf-tip" role="status" hidden></div>
-<span class="hand" style="font-size: 1.3rem; display: block; text-align: right; margin-top: .3rem">psst, hover over the shelves</span>
+<span class="hand" style="font-size: 1.3rem; display: block; text-align: right; margin-top: .3rem"><span class="hov">psst, hover over the shelves</span><span class="tap">psst, tap the things on the shelves</span></span>
 </div>
 <div class="bot">
 <p class="tag serif">What it means to make a home when life is in motion.</p>
 <a class="btn" href="#write">Submit a story by 20 December</a>
-<span class="hand">Issue 01 out January 2027. Be in it.</span>
+<span class="hand">Issue 01 out January 2027. <span style="white-space: nowrap">Be in it.</span></span>
 </div>
 </header>
 

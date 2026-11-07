@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exora: stories from people who share a home on the move</title>
+<meta name="description" content="An independent magazine by and for colivers, digital nomads and coliving hosts. Issue 01 is open for stories, photos and cover art until 20 December 2026.">
+<meta property="og:title" content="Exora: stories from people who share a home on the move">
+<meta property="og:description" content="An independent magazine by and for colivers, digital nomads and coliving hosts. Issue 01 is open for stories, photos and cover art until 20 December 2026.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FFF4E0">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,100,1;1,9..144,300..700,100,1&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFF4E0}
+a{color:#1D3557}a:hover{color:#C2412D}
+.ex{--paper:#FFF4E0;--ink:#1D3557;--soft:#4F6482;--coral:#EF7B67;--butter:#F4B63F;--blush:#A9D3E6;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;font-size:1.08rem;line-height:1.75}
+.ex *,.ex *::before,.ex *::after{box-sizing:border-box}
+.ex h1,.ex h2,.ex h3,.ex .serif{font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 1;font-weight:500;margin:0;line-height:1.04}
+.ex a:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.ex .nav{position:sticky;top:0;z-index:10;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.5rem;border-bottom:1.5px dashed var(--ink)}
+.ex .logo{font-size:1.7rem;text-decoration:none;line-height:1}
+.ex .dot::before{content:"";display:inline-block;width:.45em;height:.45em;border-radius:50%;background:var(--butter);margin-right:.35rem;vertical-align:.08em}
+.ex .links{display:flex;gap:1.4rem;font-size:.95rem;align-items:center}
+.ex .links a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.ex .links a:hover{text-decoration:underline}
+.ex .btn{display:inline-flex;align-items:center;min-height:48px;background:var(--coral);color:#1D3557;font-weight:500;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;box-shadow:3px 4px 0 var(--ink);transition:transform .2s}
+.ex .btn:hover{transform:rotate(-2deg) scale(1.04);color:#1D3557}
+.ex .cover{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-rows:auto 1fr auto;column-gap:2rem;min-height:640px;padding:1.5rem}
+.ex .cover .top{grid-column:1/-1;display:flex;justify-content:space-between;gap:1rem;font-size:.95rem}
+.ex .cover h1{grid-column:1;grid-row:2;align-self:center;font-weight:700;letter-spacing:-.04em;line-height:.8;font-size:clamp(4rem,13vw,9rem);margin:1.5rem 0 1.5rem -.04em}
+.ex .cover h1 i{color:var(--coral)}
+.ex .scene{grid-column:2;grid-row:2/4;align-self:center;justify-self:end;width:100%;max-width:500px}
+.ex .cover .bot{grid-column:1;grid-row:3;display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.ex .tag{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.1;max-width:20ch;margin:0}
+.ex .hand{font-family:"Caveat",cursive;font-weight:600;font-size:1.6rem;line-height:1.1;color:#C2412D;display:inline-block;transform:rotate(-3deg)}
+.ex .sticker{position:absolute;right:3vw;top:4.5rem;width:116px;height:116px;display:grid;place-items:center;text-align:center;z-index:2;font-family:"Caveat",cursive;font-weight:600;font-size:1.45rem;line-height:1;color:#1D3557;animation:wig 3.5s ease-in-out infinite}
+.ex .sticker::before,.ex .sticker::after,.ex .s2::before,.ex .s2::after{content:"";position:absolute;inset:0;border-radius:24%;z-index:-1;background:var(--coral)}
+.ex .sticker::after,.ex .s2::after{transform:rotate(45deg)}
+.ex .sticker span,.ex .s2 span{max-width:7ch}
+@keyframes wig{0%,100%{transform:rotate(12deg)}50%{transform:rotate(5deg)}}
+.ex .spread{display:grid;grid-template-columns:5fr 7fr}
+.ex .spread>div{padding:3.5rem 2.4rem}
+.ex .card{margin:1.5rem 1rem;border-radius:40px}
+.ex .spread h2{font-size:clamp(2.4rem,4.5vw,3.6rem);text-decoration:underline wavy var(--coral) 2.5px;text-underline-offset:.2em;text-decoration-skip-ink:none}
+.ex .pq{font-family:"Fraunces",Georgia,serif;font-style:italic;font-size:clamp(2rem,4.2vw,3.4rem);line-height:1.08;border-top:1.5px dashed var(--ink);border-bottom:1.5px dashed var(--ink);padding:1.2rem 0;margin:0;transform:rotate(-1.2deg)}
+.ex .cols{columns:2;column-gap:2.2rem}
+.ex .cols p{margin:0 0 1rem;break-inside:avoid-column}
+.ex .cols p:first-child::first-letter{font-family:"Fraunces",Georgia,serif;font-size:4.2rem;float:left;line-height:.8;padding:.3rem .5rem 0 0}
+.ex .margin{font-size:.9rem;border-top:1.5px dashed var(--ink);margin:2rem 0 0;padding-top:.6rem;max-width:30ch}
+.ex .list{list-style:none;margin:0;padding:0}
+.ex .list li{padding:1.1rem 0;border-bottom:1.5px dashed var(--ink)}
+.ex .list li:first-child{padding-top:0}
+.ex .list h3{font-size:1.9rem;margin-bottom:.25rem}
+.ex .list p{margin:0;max-width:50ch}
+.ex .toc li{display:flex;gap:1.2rem;align-items:baseline}
+.ex .pg{font-family:"Fraunces",Georgia,serif;font-size:2.3rem;min-width:3rem;line-height:1}
+.ex .t{font-family:"Fraunces",Georgia,serif;font-size:1.7rem;line-height:1.1}
+.ex .d{display:block;font-family:"DM Sans",Arial,sans-serif;font-size:.92rem;margin-top:.3rem}
+.ex .write{position:relative;background:#1D3557;color:#FFF4E0;padding:4.5rem 2rem;border-radius:40px;margin:1.5rem 1rem}
+.ex .write .in{max-width:1080px;margin:0 auto}
+.ex .write h2{color:#F4B63F;font-size:clamp(2.6rem,7vw,5rem);max-width:14ch;margin-bottom:1.5rem}
+.ex .lead{font-size:1.2rem;max-width:44ch;margin:0 0 3rem}
+.ex .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2.5rem;border-top:1.5px dashed #FFF4E0;padding-top:2rem}
+.ex .grid h3{font-size:1.7rem;margin-bottom:.6rem}
+.ex .grid ul{margin:0;padding:0;list-style:none}
+.ex .grid li{padding:.35rem 0;border-bottom:1px solid rgba(255,244,224,.25);display:flex;justify-content:space-between;gap:1rem}
+.ex .grid p{margin:0 0 .6rem}
+.ex .write .btn{box-shadow:3px 4px 0 #F4B63F}
+.ex .cta{margin-top:3rem}
+.ex .cta p{margin:1.2rem 0 0;font-size:.95rem;max-width:56ch}
+.ex .s2{position:absolute;right:6vw;top:2.5rem;width:124px;height:124px;display:grid;place-items:center;text-align:center;transform:rotate(-10deg);z-index:1;font-family:"Caveat",cursive;font-weight:600;font-size:1.5rem;line-height:1;color:#1D3557}
+.ex .s2::before,.ex .s2::after{background:#F4B63F}
+.ex .where{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;padding:0 1rem 2rem}
+.ex .where>div{padding:2.5rem 1.8rem;border-radius:32px;color:#1D3557}
+.ex .where h3{font-size:1.8rem;margin-bottom:.4rem}
+.ex .where p{margin:0}
+.ex .foot{border-top:1.5px dashed var(--ink);padding:2rem 1.8rem 3rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;font-size:.95rem}
+.ex .ill{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:780px){
+.ex .links a:first-child{display:none}
+.ex .cover{grid-template-columns:1fr;grid-template-rows:auto auto auto auto;min-height:0}
+.ex .cover h1,.ex .scene,.ex .cover .bot{grid-column:1}
+.ex .cover h1{grid-row:2}
+.ex .scene{grid-row:3;justify-self:center;margin:1rem 0 1.5rem}
+.ex .cover .bot{grid-row:4}
+.ex .sticker{top:4.5rem;right:4vw;width:92px;height:92px;font-size:1.2rem}
+.ex .spread{grid-template-columns:1fr}
+.ex .spread>div{padding:2.5rem 1.4rem}
+.ex .cols{columns:1}
+.ex .s2{position:static;margin:0 0 1.5rem;transform:rotate(-6deg)}
+.ex .write{padding:3rem 1.4rem}
+}
+.ex .scene{position:relative}
+.ex .sticker{pointer-events:none}
+.ex .item{cursor:pointer;outline:none;transform-box:fill-box;transform-origin:50% 100%;transition:transform .25s ease}
+.ex .item:hover,.ex .item:focus-visible{transform:translateY(-6px) rotate(-2deg)}
+.ex .item:focus-visible{filter:drop-shadow(0 0 3px #EF7B67)}
+.ex .tip{position:absolute;z-index:4;width:240px;background:#1D3557;color:#FFF4E0;padding:.8rem 1rem;border-radius:18px;font-size:.92rem;line-height:1.45;pointer-events:none;box-shadow:3px 4px 0 #EF7B67}
+.ex .tip b{display:block;font-family:"Caveat",cursive;font-weight:600;font-size:1.4rem;line-height:1.1;color:#F4B63F;margin-bottom:.2rem}
+@media (prefers-reduced-motion:reduce){.ex .item{transition:none}.ex .item:hover,.ex .item:focus-visible{transform:none}}
+.ex .ads{border-top:1.5px dashed var(--ink);padding:4rem 1.8rem}
+.ex .adhead{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2.4rem;align-items:end;margin-bottom:2.6rem}
+.ex .adhead h2{font-size:clamp(2.4rem,4.5vw,3.6rem);margin-top:.4rem;text-decoration:underline wavy var(--coral) 2.5px;text-underline-offset:.2em;text-decoration-skip-ink:none}
+.ex .reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.ex .reasons>div{border:1.5px solid var(--ink);border-radius:28px;padding:1.6rem 1.4rem}
+.ex .reasons .n{font-family:"Caveat",cursive;font-weight:600;font-size:1.6rem;color:#C2412D;line-height:1}
+.ex .reasons h3{font-size:1.45rem;margin:.4rem 0 .5rem}
+.ex .reasons p{margin:0;font-size:.98rem;line-height:1.6}
+.ex .adfoot{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2.4rem;margin-top:2.6rem;padding-top:2rem;border-top:1.5px dashed var(--ink);align-items:start}
+.ex .adfoot h3{font-size:1.6rem;margin-bottom:.6rem}
+.ex .adfoot p{margin:0 0 1rem}
+.ex .adfoot .offer{background:#F4B63F;border-radius:28px;padding:1.6rem 1.4rem}
+@media (max-width:780px){.ex .adhead{grid-template-columns:1fr;gap:1rem}.ex .ads{padding:3rem 1.4rem}}
+.ex .story{border-top:1.5px dashed var(--ink)}
+.ex .story h2{font-size:clamp(2.4rem,4.5vw,3.6rem)}
+.ex .why .list h3{font-size:1.6rem}
+.ex .mission{background:#EF7B67;color:#1D3557;border-radius:40px;margin:1.5rem 1rem;padding:4.5rem 2rem;text-align:center}
+.ex .mission .big{font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 1;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.15;max-width:30ch;margin:1rem auto 1.6rem}
+.ex .mission .small{max-width:52ch;margin:0 auto;font-size:1.15rem}
+.ex .support{padding:4.5rem 1.8rem;border-top:1.5px dashed var(--ink)}
+.ex .support .in{max-width:1080px;margin:0 auto}
+.ex .support h2{font-size:clamp(2.6rem,6vw,4.4rem);margin-bottom:1.2rem;max-width:16ch}
+.ex .support .lead2{font-size:1.15rem;max-width:58ch;margin:0 0 1rem}
+.ex .prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2.5rem 0}
+.ex .price{border:1.5px solid var(--ink);border-radius:28px;padding:1.8rem 1.6rem;display:flex;flex-direction:column;gap:.4rem}
+.ex .price .k{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.ex .price .amt{font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 1;font-size:3rem;line-height:1;font-weight:500}
+.ex .price p{margin:0}
+.ex .promise{border-top:1.5px dashed var(--ink);padding-top:1.4rem;max-width:62ch;margin:0 0 2rem}
+.ex .facts{list-style:none;padding:0;margin:1.4rem 0}
+.ex .facts li{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;border-bottom:1.5px dashed var(--ink)}
+.ex .body p{margin:0 0 1.1rem;max-width:60ch}
+@media (max-width:780px){.ex .links a:nth-child(2){display:none}.ex .mission{padding:3rem 1.4rem}.ex .support{padding:3rem 1.4rem}}
+@media (prefers-reduced-motion:reduce){.ex .btn:hover{transform:none}.ex .sticker{animation:none;transform:rotate(12deg)}}
+</style>
+<style>html{scroll-behavior:smooth;scroll-padding-top:4.5rem}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.tip[hidden]{display:none}.ex .spread>div{min-width:0}.ex .hand{max-width:100%}.ex{overflow-x:clip}.ex h1,.ex h2,.ex h3{overflow-wrap:break-word}@media (max-width:780px){.ex .spread{grid-template-columns:minmax(0,1fr)}}</style>
+</head>
+<body>
+<div class="ex" id="top">
+
+<nav class="nav" aria-label="Main">
+<a class="logo serif dot" href="#top">Exora</a>
+<div class="links"><a href="about.html">About</a><a href="#inside">Issue 01</a><a href="#write">Write for us</a><a href="#support">Support</a></div>
+</nav>
+
+<header class="cover">
+<div class="top"><span>An independent magazine for people who share a fridge</span><span>Issue 01</span></div>
+<div class="sticker" aria-hidden="true"><span>Open for stories!</span></div>
+<h1>Exo<i>ra</i></h1>
+<div class="scene">
+<svg class="ill" viewBox="0 0 480 430" style="display: block; width: 100%" role="img" aria-label="Illustration of two shelves holding a plant, a framed photo of three friends, noise-cancelling headphones, a laptop, a moka coffee pot and a plug adapter. Hover over or tap an item for a fun fact."><rect x="0" y="176" width="480" height="14" rx="7" fill="#EF7B67"></rect>
+<g class="item" tabindex="0" aria-label="Plant" data-tip="plant"><rect x="10" y="30" width="96" height="146" fill="transparent" stroke="none"></rect><path d="M56 120C20 116 8 88 16 62 46 70 58 96 56 120z" fill="#A9D3E6"></path><path d="M56 120C92 112 108 84 96 54 66 64 54 90 56 120z" fill="#A9D3E6"></path><path d="M56 120C40 90 44 58 56 34 68 58 72 90 56 120z" fill="#FFF4E0"></path><path style="stroke-width:1.5" d="M56 118V50M56 114L24 74M56 112L90 66"></path><path d="M30 128h52l-7 48H37z" fill="#F4B63F"></path><rect x="26" y="120" width="60" height="12" rx="3" fill="#F4B63F"></rect></g>
+<g class="item" tabindex="0" aria-label="Picture frame" data-tip="frame"><path d="M232 150l18 26"></path><rect x="124" y="84" width="122" height="92" rx="4" fill="#EF7B67"></rect><rect x="134" y="94" width="102" height="72" fill="#FFF4E0"></rect><rect x="144" y="104" width="82" height="52" fill="#A9D3E6"></rect><g style="stroke-width:1.5"><path d="M150 156q0-20 13-20t13 20z" fill="#1D3557"></path><circle cx="163" cy="127" r="6" fill="#FFF4E0"></circle><path d="M194 156q0-20 13-20t13 20z" fill="#F4B63F"></path><circle cx="207" cy="127" r="6" fill="#FFF4E0"></circle><path d="M170 156q0-24 15-24t15 24z" fill="#EF7B67"></path><circle cx="185" cy="121" r="7" fill="#FFF4E0"></circle></g></g>
+<g class="item" tabindex="0" aria-label="Headphones" data-tip="phones"><rect x="280" y="80" width="136" height="96" fill="transparent" stroke="none"></rect><path d="M304 138C304 84 392 84 392 138" fill="none" stroke-width="15"></path><path d="M304 138C304 84 392 84 392 138" fill="none" stroke="#EF7B67" stroke-width="9"></path><rect x="284" y="134" width="40" height="42" rx="14" fill="#EF7B67"></rect><rect x="372" y="134" width="40" height="42" rx="14" fill="#EF7B67"></rect><rect x="298" y="142" width="14" height="26" rx="7" fill="#F4B63F" stroke="none"></rect><rect x="384" y="142" width="14" height="26" rx="7" fill="#F4B63F" stroke="none"></rect></g>
+<g transform="translate(0 20)"><rect x="0" y="380" width="480" height="14" rx="7" fill="#EF7B67"></rect>
+<g class="item" tabindex="0" aria-label="Laptop" data-tip="laptop"><path d="M16 380L36 336H186L206 380z" fill="#FFF4E0"></path><rect x="36" y="240" width="150" height="96" rx="8" fill="#1D3557"></rect><rect x="44" y="248" width="134" height="80" rx="3" fill="#A9D3E6"></rect><circle cx="70" cy="270" r="10" fill="#F4B63F" stroke="none"></circle><path d="M44 328l30-34 22 22 24-30 58 42z" fill="#FFF4E0"></path><path style="stroke-width:1.8" stroke-dasharray="9 5" d="M46 346h128M42 355h136M38 364h144"></path><rect x="88" y="368" width="42" height="8" rx="3" fill="none" style="stroke-width:1.5"></rect></g>
+<g class="item" tabindex="0" aria-label="Moka coffee pot" data-tip="moka"><path d="M304 262h26q16 0 16 20v22q0 12-14 12h-30" fill="#1D3557"></path><path d="M240 380l8-58h48l8 58z" fill="#DCE6EE"></path><path d="M248 322l-10-68h68l-10 68z" fill="#DCE6EE"></path><path d="M238 254l6-18h60l6 18z" fill="#DCE6EE"></path><path d="M238 254l-14-10 20-8z" fill="#DCE6EE"></path><rect x="269" y="230" width="6" height="6" fill="#1D3557"></rect><circle cx="272" cy="224" r="8" fill="#1D3557"></circle><path style="stroke-width:1.5" d="M262 322l-4 58M282 322l4 58M262 254l-2 68M282 254l2 68M248 322h48"></path></g>
+<g class="item" tabindex="0" aria-label="Plug adapter" data-tip="plug"><rect x="358" y="300" width="58" height="80" fill="transparent" stroke="none"></rect><rect x="372" y="310" width="8" height="26" fill="#F4B63F"></rect><rect x="394" y="310" width="8" height="26" fill="#F4B63F"></rect><rect x="362" y="334" width="50" height="46" rx="8" fill="#FFF4E0"></rect><rect x="376" y="354" width="22" height="9" rx="4.5" fill="#EF7B67"></rect></g></g></svg>
+<div class="tip" id="shelf-tip" role="status" hidden></div>
+<span class="hand" style="font-size: 1.3rem; display: block; text-align: right; margin-top: .3rem">psst, hover over the shelves</span>
+</div>
+<div class="bot">
+<p class="tag serif">What it means to make a home when life is in motion.</p>
+<a class="btn" href="#write">Submit a story by 20 December</a>
+<span class="hand">Issue 01 out January 2027. Kettle's on.</span>
+</div>
+</header>
+
+<section class="spread" id="about">
+<div>
+<p class="pq">The late-night talks. The goodbyes. The rooms that become yours.</p>
+<p class="margin" style="color: #4F6482">Exora is written by residents, nomads and hosts, and printed as an A5 magazine, so you can still pack it with you.</p>
+</div>
+<div>
+<div class="cols">
+<p>Places and people change, the stories remain. <br>Exora explores the human side of living together on the move. No property valuations, no funding rounds, no polished brochures. Those have their own media.</p>
+<p>Instead you'll find honest storytelling from residents and hard-won advice from hosts, so that nomads, residents and hosts can build real belonging wherever they land.</p>
+<p>You don't need to be a writer to have a story.&nbsp;<br>You don't even need to spell it out, we welcome art pieces and photography too.</p>
+</div>
+<a class="hand" href="about.html" style="text-decoration: none; margin-top: 1rem; display: inline-block">Read how Exora was born, at a dinner table →</a>
+</div>
+</section>
+
+
+<section class="spread card" style="background: #F4B63F">
+<div><h2>What we publish</h2><p class="margin">These are the sections we can think of now. They might evolve depending on contributions.&nbsp;</p></div>
+<div>
+<ul class="list">
+<li><h3>Behind the Front Door</h3><p>Hosts on house meetings, boundaries, conflict, and the weight of holding space for dozens of transient lives. Also, who really ate the hummus.</p></li>
+<li><h3>Life on the Road</h3><p>Goodbyes, nomad fatigue, and how to build deep friendships fast without losing the old ones.</p></li>
+<li><h3>Rituals and Making a Home</h3><p>The objects, habits and Sunday dinners that turn a rented bedroom into a sanctuary.</p></li>
+<li><h3>Slow Destinations and Local Roots</h3><p>Places seen by staying long enough to belong, not through tourist lists.</p></li>
+<li><h3>Visual Essays</h3><p>Documentary-style photography: messy kitchens, shared desks, communal meals, annotated floor plans.</p></li>
+</ul>
+</div>
+</section>
+
+<section class="spread card" id="inside" style="background: #A9D3E6">
+<div>
+<h2>In this issue</h2>
+<p class="margin">Nothing here yet, and that's the point. Issue 01 is being built together, one contribution at a time.</p>
+<span class="hand" style="margin-top: 1.6rem; width: 366px; height: 49px; font-size: 27.6px">These pages are yours.</span>
+</div>
+<div>
+<ul class="list toc">
+<li><span class="pg" style="opacity: 0.55"><br></span><span class="t" style="font-style: italic">Your story here<span class="d"><b>Behind the Front Door.</b> Run a space? Tell us about the house meeting that changed everything.</span></span></li>
+<li><span class="pg" style="opacity: 0.55"><br></span><span class="t" style="font-style: italic">Your story here<span class="d"><b>Life on the Road.</b> What did your last goodbye teach you?</span></span></li>
+<li><span class="pg" style="opacity: 0.55"><br></span><span class="t" style="font-style: italic">Your story here<span class="d"><b>Rituals and Making a Home.</b> Which object, habit or Sunday dinner turned a room into home?</span></span></li>
+<li><span class="pg" style="opacity: 0.55"><br></span><span class="t" style="font-style: italic">Your story here<span class="d"><b>Slow Destinations.</b> Where did you stay long enough to belong?</span></span></li>
+<li><span class="pg" style="opacity: 0.55"><br></span><span class="t" style="font-style: italic">Your photos here<span class="d"><b>Visual Essays.</b> Got a camera roll full of shared kitchens and communal tables?</span></span></li>
+<li><span class="pg" style="opacity: 0.55"><br></span><span class="t" style="font-style: italic">Your art here<span class="d"><b>The cover.</b> Artists and illustrators: design the front of Issue 01.</span></span></li>
+</ul>
+<a class="btn" href="#write" style="margin-top: 2rem">Claim a page</a>
+</div>
+</section>
+
+<section class="write" id="write">
+<div class="s2" aria-hidden="true"><span>Deadline 20 Dec!</span></div>
+<div class="in">
+<h2>Got a story? Do share!</h2>
+<p class="lead">Whether you've lived in shared houses for years, for two days or run your own space, we want your unfiltered stories, hard-won lessons and ideas. Messy kitchens and mixed feelings very welcome. Submissions for this one close on <b>20 December 2026</b>.</p>
+<div class="grid">
+<div>
+<h3>Formats</h3>
+<ul>
+<li><span>Personal essays</span><span>800 to 1,800 words</span></li>
+<li><span>Host guides</span><span>600 to 1,200 words</span></li>
+<li><span>Short vignettes</span><span>250 to 500 words</span></li>
+<li><span>Photo essays</span><span>5 to 10 photos</span></li>
+<li><span>Cover art</span><span>A5, portrait</span></li>
+</ul>
+</div>
+<div>
+<h3>How to pitch</h3>
+<p>Email a 2 to 3 sentence summary of your idea, or your full draft as a Google Doc or PDF.</p>
+<p>Add a short bio, such as "digital nomad currently in Lisbon" or "co-founder of a 10-person coliving space in rural Spain".</p>
+<p>For photos, share a link to a folder of low-res previews.</p>
+<p>For cover art, send a rough sketch or idea of how you'd picture life in a shared home.</p>
+</div>
+<div>
+<h3>In return</h3>
+<p>Exora is independent and self-funded, made in spare time, so we can't pay in money yet. Not even to ourselves. <br>We can offer you a printed copy, promotion across our network, and sincere gratitude. We promise that if we ever make any money, you'll be the first to know.&nbsp;</p>
+<p>Issue 01 is out in January 2027.</p>
+</div>
+</div>
+<div style="margin-top: 2.6rem; border: 1.5px dashed #F4B63F; border-radius: 28px; padding: 1.8rem; display: flex; flex-wrap: wrap; gap: 1.4rem 2.4rem; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 380px">
+<span style="font-family: 'Caveat', cursive; font-weight: 600; font-size: 1.6rem; color: #F4B63F; display: inline-block; transform: rotate(-2deg)">Calling all artists</span>
+<h3 style="font-size: 2rem; margin: .3rem 0 .6rem">Design the cover of Issue 01</h3>
+<p style="margin: 0">Illustrators, painters, photographers and collage makers: we're looking for one artwork to sit on the front of our first issue. Send a rough sketch or idea of how you'd picture life in a shared home. Your name goes on the cover.</p>
+</div>
+<a class="btn" href="mailto:hello@exoramagazine.com?subject=COVER%20ART%3A%20%5BYour%20name%5D&amp;body=A%20short%20description%20or%20sketch%20of%20your%20cover%20idea%3A%0A%0AA%20link%20to%20your%20work%3A%0A%0AA%20short%20bio%3A%0A">Pitch a cover</a>
+</div>
+<div class="cta">
+<a class="btn" href="mailto:hello@exoramagazine.com?subject=SUBMISSION%3A%20%5BProposed%20Article%20Title%5D%20-%20%5BCategory%5D&amp;body=A%202%E2%80%933%20sentence%20summary%20of%20your%20idea%3A%0A%0AA%20short%20bio%3A%0A">Tell us your story</a>
+<p>Use the subject line: SUBMISSION: [Proposed Article Title] - [Category]. The button above fills it in for you, or write to hello@exoramagazine.com.</p>
+</div>
+</div>
+</section>
+
+<div style="padding: 3.5rem 1.8rem 1.6rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem">
+<h2 style="font-size: clamp(2.4rem, 4.5vw, 3.6rem); text-decoration: underline wavy #EF7B67 2.5px; text-underline-offset: .2em; text-decoration-skip-ink: none">Where to find Exora</h2>
+<p style="margin: 0; max-width: 34ch; color: #4F6482">Three ways to get your hands on a copy, from a coffee table near you to your own front door.</p>
+</div>
+<section class="where" id="where">
+<div style="background: #A9D3E6"><h3>In shared living rooms</h3><p>Left on the coffee tables of partner coliving spaces around the world, ideally next to the good biscuits.</p></div>
+<div style="background: #F4B63F"><h3>At your door</h3><p>Subscriptions for active nomads and space owners, starting with a simple <a href="#support">pay-what-you-can</a> model.</p></div>
+<div style="background: #EF7B67"><h3>In community hubs</h3><p>Independent spaces where people gather. Want to co-create Exora? <a href="mailto:hello@exoramagazine.com">Say hello</a>.</p></div>
+</section>
+
+<section class="support" id="support">
+<div class="in">
+<span class="hand">Fuel for the kettle</span>
+<h2>Pay what you can</h2>
+<p class="lead2">I'm not starting Exora to make money, but like any project that aims to make a lasting impact, it needs fuel. I have passion, energy and a bit of time. Sadly, funding is what's usually lacking.</p>
+<p class="lead2">If you'd like to support my work and the work of those who contribute, choose a pay-what-you-can subscription. Below are our suggested amounts, but we're grateful for whatever you're able to give at this stage.</p>
+<div class="prices">
+<div class="price"><span class="k">Print · single issue</span><span class="amt">£8</span><p>One printed copy, posted to you. £10 outside the UK. Postage included.</p></div>
+<div class="price" style="background: #F4B63F"><span class="k">Print · one year</span><span class="amt">£28</span><p>Four printed issues plus online access. £36 outside the UK. Postage included.</p></div>
+<div class="price"><span class="k">Online · single issue</span><span class="amt">£4</span><p>Read one issue online, wherever you've landed.</p></div>
+<div class="price" style="background: #A9D3E6"><span class="k">Online · one year</span><span class="amt">£12</span><p>Online access to all four issues.</p></div>
+</div>
+<p class="lead2" style="font-size: .98rem">Online, pay any amount you like. For print, we ask for at least what it costs us to make and post a copy: about £5 in the UK and £8 abroad, so your kindness never leaves us out of pocket.</p>
+<p class="promise">My promise: if Exora ever makes money, whatever is left after covering costs will go straight to the contributors. As a writer myself, it matters enormously to me to be able to pay writers and photographers.</p>
+<a class="btn" href="mailto:hello@exoramagazine.com?subject=Exora%20subscription">Subscribe, pay what you can</a>
+</div>
+</section>
+
+<section class="ads" id="ads">
+<div class="adhead">
+<div>
+<span class="hand">Founding partners wanted for Issue 01</span>
+<h2>Advertise with Exora</h2>
+</div>
+<div>
+<p style="font-size: 1.25rem; margin: 0 0 .6rem">Most ads interrupt. In Exora, they're part of the conversation: a handful of brands, chosen because our readers will genuinely be glad to discover them.</p>
+<p style="margin: 0; color: #4F6482">Four ads an issue. Hand-picked. Read cover to cover, by a whole house at a time.</p>
+</div>
+</div>
+<div class="reasons">
+<div><span class="n">01</span><h3>A hard-to-reach audience</h3><p>Remote workers, digital nomads and the hosts who run their houses. They move every few weeks, so they rarely see the same billboard twice. The US alone has 18.5 million digital nomads, staying 6.4 weeks per place on average (MBO Partners, 2025).</p></div>
+<div><span class="n">02</span><h3>One copy, a whole house of readers</h3><p>Exora lives on the coffee tables of partner coliving spaces, picked up by every resident who passes through for weeks after it arrives. That's a reach no social post can match.</p></div>
+<div><span class="n">03</span><h3>Undivided attention</h3><p>A printed A5 magazine that people keep, read slowly and pass on. With four ads per issue at most, yours never fights for space.</p></div>
+<div><span class="n">04</span><h3>In good company</h3><p>We only feature products and services our readers genuinely need. Never cigarettes, alcohol, food or beauty.</p></div>
+</div>
+<div class="adfoot">
+<div>
+<h3>A natural fit for</h3>
+<p>Travel and health insurance, banking and money transfers, coworking and coliving operators, luggage and travel gear, language learning, visa and relocation services, remote job boards, and anything else that makes life in motion a little easier.</p>
+</div>
+<div>
+<h3>Who Exora reaches</h3>
+<ul class="facts" style="margin: 0">
+<li><span>Print run, Issue 01</span><span>[COPIES]</span></li>
+<li><span>Partner coliving spaces</span><span>[NUMBER]</span></li>
+<li><span>Newsletter, podcast and social</span><span>[REACH]</span></li>
+</ul>
+</div>
+<div class="offer">
+<h3>Founding partners</h3>
+<p>Advertisers in Issue 01 get [YOUR LAUNCH OFFER] and a thank-you in every copy.</p>
+<a class="btn" href="mailto:hello@exoramagazine.com?subject=Advertising%20in%20Exora">Become a founding partner</a>
+</div>
+</div>
+</section>
+
+<footer class="foot">
+<span class="serif dot" style="font-size: 1.6rem">Exora</span>
+<span>Made by a coliver, in spare time, with too much coffee.</span>
+<svg viewBox="0 0 96 34" width="96" height="34" fill="#1D3557" aria-hidden="true"><rect x="2" width="2" height="34"></rect><rect x="7" width="4" height="34"></rect><rect x="14" width="1.5" height="34"></rect><rect x="19" width="3" height="34"></rect><rect x="26" width="5" height="34"></rect><rect x="34" width="2" height="34"></rect><rect x="39" width="1.5" height="34"></rect><rect x="44" width="4" height="34"></rect><rect x="52" width="2" height="34"></rect><rect x="57" width="3" height="34"></rect><rect x="64" width="1.5" height="34"></rect><rect x="69" width="5" height="34"></rect><rect x="77" width="2" height="34"></rect><rect x="82" width="4" height="34"></rect></svg>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var tips = {
+    plant: { t: "The plant", d: "Nothing says 'I live here now' quite like a plant. In a 2015 study, people who spent a few minutes re-potting a houseplant came away calmer than those doing computer work.", x: 4, y: 47, a: "left", v: "below" },
+    frame: { t: "The photo", d: "The lightest thing in the bag and the heaviest in meaning. One familiar face on the shelf and a rented room starts to feel like yours.", x: 38, y: 47, a: "center", v: "below" },
+    phones: { t: "The headphones", d: "Shared-house survival kit. Noise cancelling for consumers began with an idea Amar Bose sketched on a 1978 flight, fed up with the cabin roar.", x: 72, y: 47, a: "center", v: "below" },
+    laptop: { t: "The laptop", d: "Office, cinema and video call home, all in one. Also the subject of every first house conversation: what's the wifi password?", x: 6, y: 58, a: "left", v: "above" },
+    moka: { t: "The moka pot", d: "Invented in Italy in 1933 and still the quickest way to make friends in a new kitchen. Brew one, and someone always wanders in.", x: 57, y: 55, a: "center", v: "above" },
+    plug: { t: "The adapter", d: "There are around 15 plug types in use around the world. You packed the wrong one. Check the house drawer, someone left theirs.", x: 86, y: 74, a: "right", v: "above" }
+  };
+  var tip = document.getElementById("shelf-tip");
+  var cur = null;
+  function show(k){
+    var c = tips[k]; if(!c) return; cur = k;
+    tip.innerHTML = "";
+    var b = document.createElement("b"); b.textContent = c.t; tip.appendChild(b);
+    tip.appendChild(document.createTextNode(c.d));
+    var sx = c.a === "left" ? "0%" : c.a === "right" ? "-100%" : "-50%";
+    var sy = c.v === "above" ? "calc(-100% - 8px)" : "8px";
+    tip.style.left = c.x + "%"; tip.style.top = c.y + "%";
+    tip.style.transform = "translate(" + sx + ", " + sy + ")";
+    tip.hidden = false;
+  }
+  function hide(k){ if(cur === k){ tip.hidden = true; cur = null; } }
+  document.querySelectorAll(".item[data-tip]").forEach(function(el){
+    var k = el.getAttribute("data-tip");
+    el.addEventListener("mouseenter", function(){ show(k); });
+    el.addEventListener("focus", function(){ show(k); });
+    el.addEventListener("click", function(){ show(k); });
+    el.addEventListener("mouseleave", function(){ hide(k); });
+    el.addEventListener("blur", function(){ hide(k); });
+  });
+})();
+</script>
+
+</body>
+</html>

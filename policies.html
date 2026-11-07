@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exora: privacy and refunds</title>
+<meta name="description" content="How Exora handles pre-orders, refunds and your personal information.">
+<meta property="og:title" content="Exora: privacy and refunds">
+<meta property="og:description" content="How Exora handles pre-orders, refunds and your personal information.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://exora-afp5.onrender.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFF4E0">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,100,1;1,9..144,300..700,100,1&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFF4E0}
+a{color:#1D3557}a:hover{color:#C2412D}
+.ex{--paper:#FFF4E0;--ink:#1D3557;--soft:#4F6482;--coral:#EF7B67;--butter:#F4B63F;--blush:#A9D3E6;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif;font-size:1.08rem;line-height:1.75}
+.ex *,.ex *::before,.ex *::after{box-sizing:border-box}
+.ex h1,.ex h2,.ex h3,.ex .serif{font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 1;font-weight:500;margin:0;line-height:1.04}
+.ex a:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.ex .nav{position:sticky;top:0;z-index:10;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.5rem;border-bottom:1.5px dashed var(--ink)}
+.ex .logo{font-size:1.7rem;text-decoration:none;line-height:1}
+.ex .dot::before{content:"";display:inline-block;width:.45em;height:.45em;border-radius:50%;background:var(--butter);margin-right:.35rem;vertical-align:.08em}
+.ex .links{display:flex;gap:1.4rem;font-size:.95rem;align-items:center}
+.ex .links a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.ex .links a:hover{text-decoration:underline}
+.ex .btn{display:inline-flex;align-items:center;min-height:48px;background:var(--coral);color:#1D3557;font-weight:500;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;box-shadow:3px 4px 0 var(--ink);transition:transform .2s}
+.ex .btn:hover{transform:rotate(-2deg) scale(1.04);color:#1D3557}
+.ex .hand{font-family:"Caveat",cursive;font-weight:600;font-size:1.6rem;line-height:1.1;color:#C2412D;display:inline-block;transform:rotate(-3deg)}
+.ex .hero{position:relative;padding:4rem 1.8rem 3.5rem;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end}
+.ex .hero h1{font-weight:700;letter-spacing:-.03em;font-size:clamp(3.4rem,9vw,7rem);line-height:.9;margin:.6rem 0 1.2rem}
+.ex .hero h1 i{color:var(--coral)}
+.ex .hero .tag{font-family:"Fraunces",Georgia,serif;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.15;max-width:26ch;margin:0}
+.ex .spread{display:grid;grid-template-columns:5fr 7fr;border-top:1.5px dashed var(--ink)}
+.ex .spread>div{padding:3.5rem 2.4rem}
+.ex .card{margin:1.5rem 1rem;border-radius:40px;border-top:0}
+.ex .spread h2{font-size:clamp(2.2rem,4.2vw,3.4rem);text-decoration:underline wavy var(--coral) 2.5px;text-underline-offset:.2em;text-decoration-skip-ink:none}
+.ex .margin{font-size:.9rem;border-top:1.5px dashed var(--ink);margin:2rem 0 0;padding-top:.6rem;max-width:30ch}
+.ex .body p{margin:0 0 1.1rem;max-width:60ch}
+.ex .body p:first-child::first-letter{font-family:"Fraunces",Georgia,serif;font-size:4.2rem;float:left;line-height:.8;padding:.3rem .5rem 0 0}
+.ex .greek{display:flex;flex-wrap:wrap;gap:1rem;margin:1.6rem 0}
+.ex .greek div{flex:1 1 180px;border:1.5px solid var(--ink);border-radius:24px;padding:1rem 1.2rem}
+.ex .greek b{font-family:"Fraunces",Georgia,serif;font-size:2rem;font-weight:500;display:block;line-height:1.1}
+.ex .list{list-style:none;margin:0;padding:0}
+.ex .list li{padding:1.1rem 0;border-bottom:1.5px dashed var(--ink)}
+.ex .list li:first-child{padding-top:0}
+.ex .list h3{font-size:1.6rem;margin-bottom:.25rem}
+.ex .list p{margin:0;max-width:56ch}
+.ex .mission{background:#EF7B67;color:#1D3557;border-radius:40px;margin:1.5rem 1rem;padding:4.5rem 2rem;text-align:center}
+.ex .mission .big{font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 1;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.15;max-width:30ch;margin:1rem auto 1.6rem}
+.ex .mission .small{max-width:52ch;margin:0 auto;font-size:1.15rem}
+.ex .next{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;padding:0 1rem 2.5rem}
+.ex .next>div{border-radius:32px;padding:2.4rem 1.8rem;display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
+.ex .next h3{font-size:1.9rem}
+.ex .next p{margin:0}
+.ex .foot{border-top:1.5px dashed var(--ink);padding:2rem 1.8rem 3rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;font-size:.95rem}
+@media (max-width:780px){
+.ex .hero{grid-template-columns:1fr;padding:2.5rem 1.4rem 2rem}
+.ex .spread{grid-template-columns:1fr}
+.ex .spread>div{padding:2.5rem 1.4rem}
+.ex .spread>div:first-child{padding-bottom:0}
+.ex .mission{padding:3rem 1.4rem}
+}
+@media (prefers-reduced-motion:reduce){.ex .btn:hover{transform:none}}
+.ex .ig{gap:.4rem}
+.ex .links a.ig{display:inline-flex;align-items:center;gap:.4rem}
+@media (max-width:780px){.ex .igtxt{display:none}.ex .links a.ig{min-width:44px;justify-content:center}}
+.ex .pol{max-width:760px;margin:0 auto;padding:1rem 1.8rem 3rem}
+.ex .pol h2{font-size:clamp(2rem,4vw,2.8rem);margin:3rem 0 1rem;text-decoration:underline wavy var(--coral) 2.5px;text-underline-offset:.2em;text-decoration-skip-ink:none}
+.ex .pol h3{font-size:1.4rem;margin:1.8rem 0 .4rem}
+.ex .pol p,.ex .pol li{max-width:64ch}
+.ex .pol ul{padding-left:1.2rem}
+.ex .pol li{margin-bottom:.4rem}
+.ex .toc2{display:flex;flex-wrap:wrap;gap:.8rem;margin:1rem 0 0}
+.ex .toc2 a{border:1.5px solid var(--ink);border-radius:999px;padding:.5rem 1.1rem;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.ex .updated{font-size:.9rem;color:#4F6482}
+</style>
+<style>html{scroll-behavior:smooth;scroll-padding-top:4.5rem}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.tip[hidden]{display:none}.ex .spread>div{min-width:0}.ex .hand{max-width:100%}.ex{overflow-x:clip}.ex h1,.ex h2,.ex h3{overflow-wrap:break-word}@media (max-width:780px){.ex .spread{grid-template-columns:minmax(0,1fr)}}</style>
+</head>
+<body>
+<div class="ex" id="ptop">
+
+<nav class="nav" aria-label="Main">
+<a class="logo serif dot" href="index.html">Exora</a>
+<div class="links"><a href="index.html">Home</a><a href="index.html#write">Write for us</a><a class="ig" href="https://www.instagram.com/exoramagazine/" aria-label="Exora on Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg><span class="igtxt">Instagram</span></a></div>
+</nav>
+
+<header class="hero" style="grid-template-columns: 1fr">
+<div>
+<span class="hand">The small print, kept small</span>
+<h1 style="font-size: clamp(2.8rem, 7vw, 5rem)">Privacy &amp; <i>refunds</i></h1>
+<p class="tag">How Exora handles your pre-orders and your personal information, in plain English.</p>
+<div class="toc2"><a href="#refunds">Pre-orders &amp; refunds</a><a href="#privacy">Privacy</a></div>
+</div>
+</header>
+
+<main class="pol">
+
+<h2 id="refunds">Pre-orders &amp; refunds</h2>
+<p>Exora is published by <b>Life on Fifth</b>, a sole trader based in the UK. When you buy from this website you are buying from Life on Fifth. Payments are processed by Stripe.</p>
+
+<h3>What you're buying</h3>
+<p>Exora isn't out yet. Everything on sale is a <b>pre-order</b>:</p>
+<ul>
+<li><b>Print:</b> a printed copy of Issue 01 (or four issues for a one-year option), posted to the address you give at checkout.</li>
+<li><b>Online:</b> the online edition of Issue 01 (or four issues), emailed to you when each issue is released.</li>
+</ul>
+<p>Issue 01 is planned for <b>Winter 2027</b>. We take payment when you order, and we'll email you when your copy is on its way.</p>
+
+<h3>Changed your mind?</h3>
+<p>You can cancel at any time <b>before your copy is posted or emailed</b> and get a full refund. Just email us at <a href="mailto:morgane@lifeonfifth.com">morgane@lifeonfifth.com</a> with the name and email address you ordered with.</p>
+<p>For one-year orders, you can cancel at any time and we'll refund the issues that haven't been sent yet.</p>
+
+<h3>If Issue 01 is delayed</h3>
+<p>Independent magazines sometimes take a little longer than planned. If that happens we'll email you with a new date. If you'd rather not wait, or if Issue 01 hasn't been released by <b>30 June 2027</b>, you can have a full refund.</p>
+
+<h3>Lost or damaged copies</h3>
+<p>If your printed copy doesn't arrive within a reasonable time, or arrives damaged, tell us and we'll send another or refund you, whichever you prefer.</p>
+
+<h3>Online edition</h3>
+<p>Once the online edition has been emailed to you, we can't take it back. If there's a problem with the file or you can't open it, let us know and we'll fix it.</p>
+
+<h3>Pay what you can</h3>
+<p>Refunds are always for the amount you actually paid, including anything above the suggested price.</p>
+
+<p>Refunds go back to the card you paid with, usually within 5 to 10 working days. None of this affects your statutory rights.</p>
+
+<h2 id="privacy">Privacy</h2>
+<p>Life on Fifth is responsible for the personal information collected through this website. We collect as little as we can, use it only to run Exora, and never sell it.</p>
+
+<h3>When you email us</h3>
+<p>If you send a story, a cover idea, an advertising enquiry or a question, we receive your name, email address and whatever you send. We use it to reply and to consider your work for the magazine. We'll only publish your work, name or photos with your agreement. Tell us any time if you'd like your messages deleted.</p>
+
+<h3>When you pre-order</h3>
+<p>Your payment is handled by <b>Stripe</b>; we never see your card number. Stripe shares with us your name, email address, the amount you paid and, for print orders, your postal address. We use these to send your copies, contact you about your order and keep the records the law requires for tax purposes, which can be up to six years.</p>
+
+<h3>When you sign up for updates</h3>
+<p>If you join the Exora updates list, we keep your email address to send news about the magazine. Every email has an unsubscribe link.</p>
+
+<h3>When you visit the website</h3>
+<p>We don't use analytics or advertising trackers, and this website doesn't set cookies. The site is hosted by <b>Render</b>, which keeps basic technical logs (such as IP addresses) for security. Our fonts are loaded from <b>Google Fonts</b>, so your browser connects to Google when the page loads. Stripe's checkout page uses its own cookies to process payments safely.</p>
+
+<h3>Who we share it with</h3>
+<p>Only the services needed to run Exora: Stripe (payments), Render (hosting), our email provider, and the postal service (your address on the envelope). Each of them handles your information under their own privacy policies.</p>
+
+<h3>Your rights</h3>
+<p>You can ask to see the information we hold about you, correct it, or have it deleted, and you can object to how we use it. Email <a href="mailto:morgane@lifeonfifth.com">morgane@lifeonfifth.com</a>. If you're not happy with our answer, you can complain to the UK Information Commissioner's Office at <a href="https://ico.org.uk">ico.org.uk</a>.</p>
+
+<p class="updated">Last updated: 7 November 2026</p>
+</main>
+
+<footer class="foot"><span class="serif dot" style="font-size: 1.6rem">Exora</span><span>Made by a coliver and coliving owner with too much coffee and too little spare time.</span><span style="flex-basis: 100%; font-size: .85rem; color: #4F6482">Exora is published by Life on Fifth, sole trader. Payments processed securely by Stripe. · <a href="policies.html">Privacy &amp; refunds</a> · Instagram: <a href="https://www.instagram.com/exoramagazine/">@exoramagazine</a></span></footer>
+
+</div>
+
+
+</body>
+</html>

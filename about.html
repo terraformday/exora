@@ -89,17 +89,20 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex .ps{position:relative;display:block;margin:2rem 0 1rem;max-width:52ch;background:#FFFBF3;border:1.5px dashed #1D3557;border-radius:28px;padding:1.1rem 1.4rem 1.2rem;font-size:.98rem;line-height:1.65;font-style:italic;color:#4F6482;transform:rotate(-1.2deg)}
 .ex .ps::after{content:"";position:absolute;left:2.4rem;bottom:-11px;width:20px;height:20px;background:#FFFBF3;border-right:1.5px dashed #1D3557;border-bottom:1.5px dashed #1D3557;transform:rotate(45deg)}
 .ex .psmark{font-family:"Caveat",cursive;font-style:normal;font-weight:600;font-size:1.7rem;line-height:1;color:#C2412D;margin-right:.3rem;vertical-align:-.1em}
-.ex .annc{display:block;background:#1D3557;color:#FFF4E0;text-align:center;padding:.6rem 1rem;font-size:.98rem;line-height:1.4;text-decoration:none}
-.ex a.annc{text-decoration:none}
+.ex .annc{display:block;position:sticky;top:0;z-index:11;height:2.6rem;line-height:2.6rem;background:#1D3557;color:#FFF4E0;text-align:center;padding:0 1rem;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}
+.ex .annc .sh{display:none}
+.ex .annc~.nav{top:2.6rem}
+@media (max-width:700px){.ex .annc .lg{display:none}.ex .annc .sh{display:inline}}
+.ex a.annc{text-decoration:none !important}
 .ex a.annc:hover{color:#FFF4E0;text-decoration:underline}
 .ex .annc b{color:#F4B63F;font-weight:500}
 </style>
-<style>html{scroll-behavior:smooth;scroll-padding-top:4.5rem}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.tip[hidden]{display:none}.ex .spread>div{min-width:0}.ex .hand{max-width:100%}.ex{overflow-x:clip}.ex h1,.ex h2,.ex h3{overflow-wrap:break-word}@media (max-width:780px){.ex .spread{grid-template-columns:minmax(0,1fr)}}</style>
+<style>html{scroll-behavior:smooth;scroll-padding-top:7.5rem}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.tip[hidden]{display:none}.ex .spread>div{min-width:0}.ex .hand{max-width:100%}.ex{overflow-x:clip}.ex h1,.ex h2,.ex h3{overflow-wrap:break-word}@media (max-width:780px){.ex .spread{grid-template-columns:minmax(0,1fr)}}</style>
 </head>
 <body>
 <div class="ex" id="atop">
 
-<a class="annc" href="index.html#write">Issue 01 is open for stories, photos, recipes and cover art until <b>20 December 2026</b> →</a>
+<a class="annc" href="index.html#write"><span class="lg">Issue 01 is open for stories, photos, recipes and cover art until <b>20 December 2026</b> →</span><span class="sh">Stories open until <b>20 Dec 2026</b> →</span></a>
 <nav class="nav" aria-label="Main">
 <a class="logo serif dot" href="index.html">Exora</a>
 <div class="links"><a href="index.html">Home</a><a href="index.html#write">Write for us</a><a class="ig" href="https://www.instagram.com/exoramagazine/" aria-label="Exora on Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg><span class="igtxt">Instagram</span></a></div>
@@ -112,6 +115,20 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <p class="tag">Where, when and why a magazine about sharing a home on the move came to be.</p>
 </div>
 </header>
+
+<section class="editor">
+<figure class="print">
+<img src="morgane-selgars.jpg" alt="Morgane smiling in an orchard at Selgars Mill, holding a basket of freshly picked apples" width="720" height="900">
+<figcaption class="hand">Apple season at Selgars Mill, Devon</figcaption>
+</figure>
+<div class="enote">
+<span class="hand">A note from the kitchen table</span>
+<h2>Hi, I'm Morgane.</h2>
+<p>I'm a writer, a coliver, and I host people at <a href="https://www.selgars.org">Selgars Mill</a> in Devon, where my days start with coffee and end at a shared dining table.</p>
+<p>But Exora isn't my magazine. It belongs to everyone who has ever shared a home with strangers and ended up with friends. I'm just the one keeping the kettle on while you tell the stories.</p>
+<p class="sig">Morgane, founder &amp; editor</p>
+</div>
+</section>
 
 <section class="spread">
 <div>
@@ -157,19 +174,6 @@ a{color:#1D3557}a:hover{color:#C2412D}
 </div>
 </section>
 
-<section class="editor">
-<figure class="print">
-<img src="morgane-selgars.jpg" alt="Morgane smiling in an orchard at Selgars Mill, holding a basket of freshly picked apples" width="720" height="900">
-<figcaption class="hand">Apple season at Selgars Mill, Devon</figcaption>
-</figure>
-<div class="enote">
-<span class="hand">A note from the kitchen table</span>
-<h2>Hi, I'm Morgane.</h2>
-<p>I'm a writer, a coliver, and I host people at <a href="https://www.selgars.org">Selgars Mill</a> in Devon, where my days start with coffee and end at a shared dining table.</p>
-<p>But Exora isn't my magazine. It belongs to everyone who has ever shared a home with strangers and ended up with friends. I'm just the one keeping the kettle on while you tell the stories.</p>
-<p class="sig">Morgane, founder &amp; editor</p>
-</div>
-</section>
 
 <section class="mission">
 <span class="hand" style="color: #1D3557">Why we're here</span>

@@ -40,13 +40,14 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex .links a:hover{text-decoration:underline}
 .ex .btn{display:inline-flex;align-items:center;min-height:48px;background:var(--coral);color:#1D3557;font-weight:500;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;box-shadow:3px 4px 0 var(--ink);transition:transform .2s}
 .ex .btn:hover{transform:rotate(-2deg) scale(1.04);color:#1D3557}
-.ex .cover{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);grid-template-rows:auto 1fr auto;column-gap:2rem;min-height:640px;padding:1.5rem}
+.ex .cover{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto 1fr auto;column-gap:3rem;min-height:640px;padding:1.5rem;max-width:1240px;margin:0 auto}
 .ex .cover .top{grid-column:1/-1;display:flex;justify-content:space-between;gap:1rem;font-size:.95rem}
-.ex .cover h1{grid-column:1;grid-row:2;align-self:center;font-weight:700;letter-spacing:-.04em;line-height:.8;font-size:clamp(4rem,13vw,9rem);margin:1.5rem 0 1.5rem -.04em}
+.ex .cover h1{grid-column:1;grid-row:2;align-self:center;font-weight:700;letter-spacing:-.04em;line-height:.8;font-size:clamp(4rem,13vw,12rem);margin:1.5rem 0 1.5rem -.04em}
 .ex .cover h1 i{color:var(--coral)}
-.ex .scene{grid-column:2;grid-row:2/4;align-self:center;justify-self:end;width:100%;max-width:500px}
+.ex .scene{grid-column:2;grid-row:2/4;align-self:center;justify-self:center;width:100%;max-width:540px}
 .ex .cover .bot{grid-column:1;grid-row:3;display:flex;flex-direction:column;gap:1rem;align-items:flex-start}
-.ex .tag{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.1;max-width:20ch;margin:0}
+.ex .tag{font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.1;max-width:22ch;margin:0}
+.ex #about .margin{border-top:0;padding-top:0;margin-top:1.6rem}
 .ex .hand{font-family:"Caveat",cursive;font-weight:600;font-size:1.6rem;line-height:1.1;color:#C2412D;display:inline-block;transform:rotate(-3deg)}
 .ex .sticker{position:absolute;right:3vw;top:4.5rem;width:116px;height:116px;display:grid;place-items:center;text-align:center;z-index:2;font-family:"Caveat",cursive;font-weight:600;font-size:1.45rem;line-height:1;color:#1D3557;animation:wig 3.5s ease-in-out infinite}
 .ex .sticker::before,.ex .sticker::after,.ex .s2::before,.ex .s2::after{content:"";position:absolute;inset:0;border-radius:24%;z-index:-1;background:var(--coral)}
@@ -230,17 +231,34 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex #inside .list li:nth-child(2){padding-top:0}
 .ex #inside .list h3{font-size:1.45rem}
 @media (max-width:900px){.ex #inside .list{grid-template-columns:minmax(0,1fr)}.ex #inside .list li:nth-child(2){padding-top:1.1rem}}
-.ex .annc{display:block;background:#1D3557;color:#FFF4E0;text-align:center;padding:.6rem 1rem;font-size:.98rem;line-height:1.4;text-decoration:none}
-.ex a.annc{text-decoration:none}
+.ex .annc{display:block;position:sticky;top:0;z-index:11;height:2.6rem;line-height:2.6rem;background:#1D3557;color:#FFF4E0;text-align:center;padding:0 1rem;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-decoration:none}
+.ex .annc .sh{display:none}
+.ex .annc~.nav{top:2.6rem}
+@media (max-width:700px){.ex .annc .lg{display:none}.ex .annc .sh{display:inline}}
+.ex a.annc{text-decoration:none !important}
 .ex a.annc:hover{color:#FFF4E0;text-decoration:underline}
 .ex .annc b{color:#F4B63F;font-weight:500}
+.ex .wwp{display:block;padding:3.5rem 2.4rem}
+.ex .wwp-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem 2rem;margin-bottom:2.2rem}
+.ex .wwp-head h2{flex:1 1 100%}
+.ex .wwp-note{margin:0;max-width:52ch;font-size:1.02rem}
+.ex .wwp-note .hand{display:inline-block;margin-left:.3rem;font-size:1.5rem}
+.ex .wwp-cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.ex .wwp-cards li{background:#FFF4E0;border:1.5px solid #1D3557;border-radius:24px;padding:1.3rem 1.2rem 1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.ex .wwp-cards h3{font-size:1.35rem;line-height:1.1;margin:0}
+.ex .wwp-cards p{margin:0;font-style:italic;font-size:.98rem;line-height:1.45}
+.ex .wwp>div{padding:0}
+.ex .pitch{list-style:disc;margin:.4rem 0 0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.45rem}
+.ex .pitch li{padding:0;border:0;display:list-item}
+@media (max-width:1000px){.ex .wwp-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.ex .wwp{padding:2.5rem 1.2rem}.ex .wwp-cards{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.8rem;-webkit-overflow-scrolling:touch}.ex .wwp-cards li{scroll-snap-align:start}}
 </style>
-<style>html{scroll-behavior:smooth;scroll-padding-top:4.5rem}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.tip[hidden]{display:none}.ex .spread>div{min-width:0}.ex .hand{max-width:100%}.ex{overflow-x:clip}.ex h1,.ex h2,.ex h3{overflow-wrap:break-word}@media (max-width:780px){.ex .spread{grid-template-columns:minmax(0,1fr)}}</style>
+<style>html{scroll-behavior:smooth;scroll-padding-top:7.5rem}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.tip[hidden]{display:none}.ex .spread>div{min-width:0}.ex .hand{max-width:100%}.ex{overflow-x:clip}.ex h1,.ex h2,.ex h3{overflow-wrap:break-word}@media (max-width:780px){.ex .spread{grid-template-columns:minmax(0,1fr)}}</style>
 </head>
 <body>
 <div class="ex" id="top">
 
-<a class="annc" href="#write">Issue 01 is open for stories, photos, recipes and cover art until <b>20 December 2026</b> →</a>
+<a class="annc" href="#write"><span class="lg">Issue 01 is open for stories, photos, recipes and cover art until <b>20 December 2026</b> →</span><span class="sh">Stories open until <b>20 Dec 2026</b> →</span></a>
 <nav class="nav" aria-label="Main">
 <a class="logo serif dot" href="#top">Exora</a>
 <div class="links"><a href="about.html">About</a><a href="#inside">Issue 01</a><a href="#write">Write for us</a><a href="#support">Support</a><a class="ig" href="https://www.instagram.com/exoramagazine/" aria-label="Exora on Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg><span class="igtxt">Instagram</span></a></div>
@@ -280,7 +298,7 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <p>Instead you'll find honest storytelling from residents and hard-won advice from hosts, so that nomads, residents and hosts can build real belonging wherever they land.</p>
 <p>You don't need to be a writer to have a story.&nbsp;<br>You don't even need to spell it out, we welcome art pieces and photography too.</p>
 </div>
-<a class="hand" href="about.html" style="text-decoration: none; margin-top: 1rem; display: inline-block">Read how Exora was born, at a dinner table →</a>
+<a class="hand" href="about.html" style="text-decoration: none; margin-top: 2.6rem; display: inline-block">Read how Exora was born, at a dinner table →</a>
 </div>
 </section>
 
@@ -313,20 +331,18 @@ a{color:#1D3557}a:hover{color:#C2412D}
 </section>
 
 
-<section class="spread card" id="inside" style="background: #F4B63F">
-<div><h2>What we publish</h2><p class="margin">These are the sections we can think of now. They might evolve depending on contributions.&nbsp;</p><span class="hand" style="margin-top: 1.6rem">These pages are yours.</span><br><a class="btn" href="#write" style="margin-top: 1.2rem">Claim a page</a></div>
-<div>
-<ul class="list">
-<li><h3>Behind the Front Door</h3><p>Hosts on house meetings, boundaries, conflict, and the weight of holding space for dozens of transient lives.</p><p class="ask">Run a space? Tell us about the house meeting that changed everything.</p></li>
-<li><h3>Life on the Road</h3><p>Goodbyes, nomad fatigue, and how to build deep friendships fast without losing the old ones.</p><p class="ask">What did your last goodbye teach you?</p></li>
-<li><h3>Rituals and Making a Home</h3><p>The objects, habits and Sunday dinners that turn a rented bedroom into a sanctuary.</p><p class="ask">Which object, habit or Sunday dinner turned a room into home?</p></li>
-<li><h3>Slow Destinations and Local Roots</h3><p>Places seen by staying long enough to belong, not through tourist lists.</p><p class="ask">Where did you stay long enough to belong?</p></li>
-<li><h3>Visual Essays</h3><p>Documentary-style photography: messy kitchens, shared desks, communal meals, annotated floor plans.</p><p class="ask">Got a camera roll full of shared kitchens and communal tables?</p></li>
-<li><h3>Feeding the House</h3><p>Recipes for a crowd: the one-pot dish that feeds twelve, the crowd pleaser everyone asks for, the meal you can cook in any shared kitchen in the world.</p><p class="ask">What do you cook when the whole house is hungry?</p></li>
-<li><h3>Send a Toucan</h3><p>The last word goes to gratitude: a thank-you, a big up or a shout-out to a housemate, a host or a space that made shared living special. You too can make someone's day.</p><p class="ask">Who deserves a big up? A housemate, a host, a whole house?</p></li>
-<li><h3>The cover</h3><p>Every issue has a cover drawn, painted or photographed by a reader.</p><p class="ask">Artists and illustrators: design the front of Issue 01.</p></li>
+<section class="spread card wwp" id="inside" style="background: #F4B63F">
+<div class="wwp-head"><h2>What we publish</h2><p class="wwp-note">Eight ways into Issue 01. They might evolve depending on contributions. <span class="hand">These pages are yours.</span></p><a class="btn" href="#write">Claim a page</a></div>
+<ul class="wwp-cards">
+<li><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1D3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 42V8h24v34" fill="#EF7B67"></path><path d="M6 42h36"></path><circle cx="30" cy="26" r="2" fill="#1D3557" stroke="none"></circle><path d="M17 14h14v8H17z" fill="#FFF4E0"></path></svg><h3>Behind the Front Door</h3><p>Run a space? Tell us about the house meeting that changed everything.</p></li>
+<li><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1D3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="16" width="32" height="24" rx="4" fill="#A9D3E6"></rect><path d="M18 16v-5h12v5M8 26h32M15 40v3M33 40v3"></path></svg><h3>Life on the Road</h3><p>What did your last goodbye teach you?</p></li>
+<li><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1D3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 20h24v14a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" fill="#F4B63F"></path><path d="M34 24h3a5 5 0 0 1 0 10h-3M16 8q-3 4 0 8M22 6q-3 4 0 8M28 8q-3 4 0 8"></path></svg><h3>Rituals and Making a Home</h3><p>Which object, habit or Sunday dinner turned a room into home?</p></li>
+<li><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1D3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 42s12-11 12-20a12 12 0 0 0-24 0c0 9 12 20 12 20z" fill="#EF7B67"></path><circle cx="24" cy="22" r="4.5" fill="#FFF4E0"></circle></svg><h3>Slow Destinations</h3><p>Where did you stay long enough to belong?</p></li>
+<li><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1D3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="36" height="26" rx="5" fill="#A9D3E6"></rect><path d="M17 14l3-5h8l3 5"></path><circle cx="24" cy="27" r="7" fill="#FFF4E0"></circle><circle cx="36" cy="19" r="1.5" fill="#1D3557" stroke="none"></circle></svg><h3>Visual Essays</h3><p>Got a camera roll full of shared kitchens and communal tables?</p></li>
+<li><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1D3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 22h28v12a8 8 0 0 1-8 8H18a8 8 0 0 1-8-8z" fill="#EF7B67"></path><path d="M6 22h36M4 28h6M38 28h6M18 6q-3 4 0 8M24 4q-3 4 0 8M30 6q-3 4 0 8"></path></svg><h3>Feeding the House</h3><p>What do you cook when the whole house is hungry?</p></li>
+<li><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1D3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40c-4-10 0-24 10-26 6-1 9 4 9 10 0 8-7 14-19 16z" fill="#1D3557"></path><path d="M18 16c-3 3-4 9-2 14 3-1 5-6 5-11z" fill="#FFF4E0"></path><path d="M24 14c6-4 14-4 20 2-6 3-14 4-19 3z" fill="#F4B63F"></path><circle cx="20" cy="15" r="2.5" fill="#A9D3E6"></circle></svg><h3>Send a Toucan</h3><p>Who deserves a big up? A housemate, a host, a whole house?</p></li>
+<li><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#1D3557" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="8" width="28" height="34" rx="2" fill="#FFF4E0"></rect><path d="M10 34l7-9 5 6 4-4 4 7z" fill="#A9D3E6"></path><circle cx="25" cy="17" r="3" fill="#F4B63F"></circle><path d="M44 6L32 22" stroke-width="3"></path><path d="M33 20l-3 6 5-3z" fill="#EF7B67"></path></svg><h3>The Cover</h3><p>Artists and illustrators: design the front of Issue 01.</p></li>
 </ul>
-</div>
 </section>
 
 
@@ -349,11 +365,13 @@ a{color:#1D3557}a:hover{color:#C2412D}
 </div>
 <details class="fold" open>
 <summary><h3>How to pitch</h3></summary>
-<p>Email a 2 to 3 sentence summary of your idea, or your full draft as a Google Doc or PDF.</p>
-<p>Add a short bio, such as "digital nomad currently in Lisbon" or "co-founder of a 10-person coliving space in rural Spain".</p>
-<p>If you're happy to, attach a photo of yourself too, and tell us if we can use it to introduce you and your piece on Instagram and in our newsletter. Totally optional.</p>
-<p>For photos, share a link to a folder of low-res previews.</p>
-<p>For cover art, send a rough sketch or idea of how you'd picture life in a shared home.</p>
+<ul class="pitch">
+<li><b>Your idea:</b> a 2 to 3 sentence summary, or your full draft (Google Doc or PDF)</li>
+<li><b>A short bio:</b> e.g. "digital nomad currently in Lisbon"</li>
+<li><b>Photos:</b> a link to a folder of low-res previews</li>
+<li><b>Cover art:</b> a rough sketch or idea</li>
+<li><b>Optional:</b> a photo of you, and whether we can use it to promote your piece</li>
+</ul>
 </details>
 <details class="fold" open>
 <summary><h3>In return</h3></summary>

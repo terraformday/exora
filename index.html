@@ -173,8 +173,8 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex .house h2{font-size:clamp(2rem,4.2vw,3.4rem);line-height:1.1;max-width:24ch;margin:.8rem auto 1.2rem}
 .ex .house .hlead{font-size:1.2rem;max-width:52ch;margin:0 auto 2.4rem}
 .ex .roles{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;max-width:980px}
-.ex .roles li{border:1.5px solid var(--ink);border-radius:28px;padding:1.3rem 1rem;font-size:1rem;background:#FFFBF3}
-.ex .roles li:nth-child(1){background:#F4B63F}.ex .roles li:nth-child(2){background:#A9D3E6}.ex .roles li:nth-child(3){background:#EF7B67}
+.ex .roles li{padding:0 .4rem;font-size:1rem;display:flex;flex-direction:column;align-items:center;text-align:center}
+.ex .roles svg{display:block;width:140px;height:auto;max-width:100%;margin-bottom:.6rem}
 .ex .roles b{display:block;font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 1;font-weight:500;font-size:1.7rem;line-height:1.1;margin-bottom:.2rem}
 @media (max-width:780px){.ex .house{padding:3rem 1.4rem}.ex .roles{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.ex .roles b{font-size:1.4rem}}
 .ex .myth{border-top:1.5px dashed var(--ink);padding:4rem 1.8rem;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2.4rem;align-items:center;max-width:1240px;margin:0 auto}
@@ -253,7 +253,7 @@ a{color:#1D3557}a:hover{color:#C2412D}
 @media (max-width:1000px){.ex .wwp-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:620px){.ex .wwp{padding:2.5rem 1.2rem}.ex .wwp-cards{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:78%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.8rem;-webkit-overflow-scrolling:touch}.ex .wwp-cards li{scroll-snap-align:start}}
 .ex>section,.ex>footer,.ex>div{max-width:1400px;margin-left:auto;margin-right:auto}
-@media (min-width:1432px){.ex>section.card,.ex>section.write{margin-left:auto;margin-right:auto}}
+.ex>section.card,.ex>section.write{margin-left:auto;margin-right:auto;width:calc(100% - 2rem)}
 .ex .nav{padding-left:max(1.5rem,calc((100% - 1400px)/2 + 1.8rem));padding-right:max(1.5rem,calc((100% - 1400px)/2 + 1.8rem))}
 </style>
 <style>html{scroll-behavior:smooth;scroll-padding-top:7.5rem}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.tip[hidden]{display:none}.ex .spread>div{min-width:0}.ex .hand{max-width:100%}.ex{overflow-x:clip}.ex h1,.ex h2,.ex h3{overflow-wrap:break-word}@media (max-width:780px){.ex .spread{grid-template-columns:minmax(0,1fr)}}</style>
@@ -326,10 +326,10 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <figure class="print v3"><img src="pancakes.jpg" alt="Stacks of pancakes on a plate on a wooden table in morning light, with flowers in a jug" width="720" height="900"><figcaption class="hand">Pancakes, made to share</figcaption></figure>
 </div>
 <ul class="roles">
-<li><b>You write</b>the stories</li>
-<li><b>You shoot</b>the photos</li>
-<li><b>You draw</b>the cover</li>
-<li><b>You shape</b>what comes next</li>
+<li><svg viewBox="0 0 140 110" width="140" height="110" fill="none" stroke="#1D3557" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A pen writing on a notebook page"><circle cx="66" cy="58" r="46" fill="#F4B63F" stroke="none"></circle><g transform="rotate(-8 60 60)"><rect x="28" y="22" width="62" height="74" rx="6" fill="#FFF4E0"></rect><path d="M38 40h40M38 52h40M38 64h26"></path><path d="M38 78q6-8 12 0t12 0t10-2" stroke="#C2412D"></path></g><g transform="rotate(38 100 56)"><rect x="94" y="14" width="12" height="62" rx="4" fill="#EF7B67"></rect><path d="M94 76l6 14 6-14z" fill="#FFF4E0"></path><path d="M98.5 86h3"></path><rect x="94" y="14" width="12" height="10" rx="3" fill="#1D3557"></rect></g></svg><b>You write</b>the stories</li>
+<li><svg viewBox="0 0 140 110" width="140" height="110" fill="none" stroke="#1D3557" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A camera taking a photo, with a flash"><circle cx="70" cy="60" r="46" fill="#A9D3E6" stroke="none"></circle><rect x="30" y="40" width="80" height="54" rx="10" fill="#FFF4E0"></rect><path d="M50 40l7-11h26l7 11"></path><circle cx="70" cy="67" r="17" fill="#A9D3E6"></circle><circle cx="70" cy="67" r="8" fill="#1D3557"></circle><rect x="92" y="48" width="10" height="6" rx="2" fill="#F4B63F"></rect><path d="M112 22l8-8M118 34h10M104 14v-9" stroke="#C2412D"></path></svg><b>You shoot</b>the photos</li>
+<li><svg viewBox="0 0 140 110" width="140" height="110" fill="none" stroke="#1D3557" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A paintbrush painting a colourful stroke"><circle cx="70" cy="60" r="46" fill="#EF7B67" stroke="none"></circle><path d="M24 86q18-30 40-14t44-22" stroke="#F4B63F" stroke-width="10"></path><path d="M24 86q18-30 40-14t44-22" stroke="#1D3557" stroke-width="2" opacity=".0"></path><g transform="rotate(40 96 40)"><rect x="91" y="2" width="10" height="44" rx="4" fill="#FFF4E0"></rect><rect x="90" y="44" width="12" height="9" fill="#A9D3E6"></rect><path d="M90 53q6 18 12 0z" fill="#F4B63F"></path></g><circle cx="38" cy="38" r="4" fill="#A9D3E6"></circle><circle cx="50" cy="28" r="3" fill="#FFF4E0"></circle></svg><b>You draw</b>the cover</li>
+<li><svg viewBox="0 0 140 110" width="140" height="110" fill="none" stroke="#1D3557" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="The next issue of the magazine, number 02, with sparkles"><circle cx="70" cy="60" r="46" fill="#FFFBF3" stroke="#1D3557" stroke-width="1.5" stroke-dasharray="4 5"></circle><rect x="44" y="26" width="56" height="74" rx="4" fill="#FFF4E0" transform="rotate(6 72 63)"></rect><rect x="38" y="22" width="56" height="74" rx="4" fill="#F4B63F"></rect><text x="66" y="60" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-size="24" font-weight="700" fill="#1D3557" stroke="none">02</text><path d="M48 74h36M48 84h24"></path><path d="M112 22v14M105 29h14M24 30v10M19 35h10" stroke="#C2412D"></path></svg><b>You shape</b>what comes next</li>
 </ul>
 </section>
 

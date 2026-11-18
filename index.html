@@ -270,6 +270,25 @@ a{color:#1D3557}a:hover{color:#C2412D}
 .ex>section,.ex>footer,.ex>div{max-width:1400px;margin-left:auto;margin-right:auto}
 .ex>section.card,.ex>section.write{margin-left:auto;margin-right:auto;width:calc(100% - 2rem)}
 .ex .nav{padding-left:max(1.5rem,calc((100% - 1400px)/2 + 1.8rem));padding-right:max(1.5rem,calc((100% - 1400px)/2 + 1.8rem))}
+.ex .gift{border-top:1.5px dashed var(--ink);padding:4.5rem 1.8rem;background:#1D3557;color:#FFF4E0}
+.ex .gift .in{max-width:1080px;margin:0 auto}
+.ex .gift .gtop{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:2.6rem;align-items:center}
+.ex .gift .hand{color:#F4B63F}
+.ex .gift h2{font-size:clamp(2.6rem,6vw,4.4rem);margin-bottom:1.2rem;max-width:12ch;color:#FFF4E0}
+.ex .gift .lead2{font-size:1.15rem;max-width:52ch;margin:0 0 1rem}
+.ex .gift a{color:#FFF4E0}
+.ex .gift .gcard{margin:0;transform:rotate(2.5deg);border-radius:14px;overflow:hidden;box-shadow:10px 12px 0 rgba(0,0,0,.25);border:1.5px solid #FFF4E0}
+.ex .gift .gcard img{display:block;width:100%;height:auto}
+.ex .gift .steps{list-style:none;counter-reset:g;margin:2.6rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.ex .gift .steps li{counter-increment:g;border-top:1.5px dashed #FFF4E0;padding-top:.8rem;font-size:1rem;line-height:1.55}
+.ex .gift .steps li::before{content:counter(g);display:block;font-family:"Fraunces",Georgia,serif;font-size:2rem;line-height:1;color:#F4B63F;margin-bottom:.4rem}
+.ex .gift .steps b{display:block;font-size:1.08rem}
+.ex .gift .prices{grid-template-columns:repeat(3,minmax(0,1fr));margin:2.6rem 0 1.2rem}
+.ex .gift .price{color:#1D3557;background:#FFF4E0;border-color:#FFF4E0}
+.ex .gift .price a.pick{color:#1D3557}
+.ex .gift .price a.pick:hover{color:#FFF4E0}
+.ex .gift .small{font-size:.92rem;color:#D6DEEA;margin:0;max-width:70ch}
+@media (max-width:780px){.ex .gift{padding:3rem 1.4rem}.ex .gift .gtop{grid-template-columns:minmax(0,1fr);gap:1.6rem}.ex .gift .gcard{max-width:420px}.ex .gift .steps{grid-template-columns:minmax(0,1fr);gap:1rem}.ex .gift .prices{grid-template-columns:minmax(0,1fr);gap:.7rem}.ex .links a.hm{display:none}}
 </style>
 <style>html{scroll-behavior:smooth;scroll-padding-top:7.5rem}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}.tip[hidden]{display:none}.ex .spread>div{min-width:0}.ex .hand{max-width:100%}.ex{overflow-x:clip}.ex h1,.ex h2,.ex h3{overflow-wrap:break-word}@media (max-width:780px){.ex .spread{grid-template-columns:minmax(0,1fr)}}</style>
 </head>
@@ -279,7 +298,7 @@ a{color:#1D3557}a:hover{color:#C2412D}
 <a class="annc" href="#write"><span class="lg">Issue 01 is open for stories, photos, recipes and cover art until <b>20 December 2026</b> →</span><span class="sh">Stories open until <b>20 Dec 2026</b> →</span></a>
 <nav class="nav" aria-label="Main">
 <a class="logo serif dot" href="#top">Exora</a>
-<div class="links"><a href="about.html">About</a><a href="#inside">Issue 01</a><a href="#write">Write for us</a><a href="#support">Support</a><a class="copy" href="#support">Pre-order</a><a class="ig" href="https://www.instagram.com/exoramagazine/" aria-label="Exora on Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg><span class="igtxt">Instagram</span></a></div>
+<div class="links"><a href="about.html">About</a><a href="#inside">Issue 01</a><a href="#write">Write for us</a><a href="#support">Support</a><a class="hm" href="#gift">Gift</a><a class="copy" href="#support">Pre-order</a><a class="ig" href="https://www.instagram.com/exoramagazine/" aria-label="Exora on Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle></svg><span class="igtxt">Instagram</span></a></div>
 </nav>
 
 <header class="cover">
@@ -514,9 +533,34 @@ a{color:#1D3557}a:hover{color:#C2412D}
 </div>
 <p class="lead2" style="font-size: .98rem">Print prices include postage anywhere in the world.<br><span style="font-size: .9rem; color: #4F6482">Payments are processed securely by Stripe and made to <b>Life on Fifth</b>, the sole trader behind Exora, so that's the name you'll see on your receipt. Changed your mind? See our <a href="policies.html#refunds">pre-order and refund policy</a>.</span></p>
 <p class="promise">My promise: if Exora ever makes money, whatever is left after covering costs will go straight to the contributors. As a writer myself, it matters enormously to me to be able to pay writers and photographers.</p>
-<p style="margin: 0; font-size: .98rem">Want to gift a copy, order several for your coliving space, or have a question? <a href="mailto:morgane@lifeonfifth.com?subject=Exora%20copies">Write to me</a>.</p>
+<p style="margin: 0; font-size: .98rem">Want to <a href="#gift">give Exora as a gift</a>, order several for your coliving space, or have a question? <a href="mailto:morgane@lifeonfifth.com?subject=Exora%20copies">Write to me</a>.</p>
 <p style="margin: .8rem 0 0; font-size: .98rem">Not ready to order? Get an email when Issue 01 lands, or follow <a href="https://www.instagram.com/exoramagazine/">@exoramagazine</a> on Instagram for news and sneak peeks.</p>
 <a href="https://exoramag.substack.com/subscribe" style="display: inline-flex; align-items: center; min-height: 44px; margin-top: .8rem; padding: .5rem 1.3rem; border: 1.5px solid #1D3557; border-radius: 999px; text-decoration: none; font-weight: 500; color: #1D3557">Get notified by email</a>
+</div>
+</section>
+
+<section class="gift" id="gift">
+<div class="in">
+<div class="gtop">
+<div>
+<span class="hand">For the housemate who has everything</span>
+<h2>Give Exora as a gift</h2>
+<p class="lead2">Know someone who has shared a kitchen, a sofa or a whole life with strangers who became friends? Give them a copy, or a year of stories from people who choose to live together.</p>
+<p class="lead2">Every gift comes with a card you can print or forward, so there's something to give now, even though Issue 01 lands in Winter 2027.</p>
+</div>
+<figure class="gcard"><img src="gift-card.jpg" width="1200" height="846" loading="lazy" alt="The Exora gift card: on the left, the Exora Magazine logo with a toucan in a Santa hat; on the right, 'A year of Exora Mag' with space to write who it's to and from."></figure>
+</div>
+<ol class="steps">
+<li><b>Pick a gift</b>For a printed copy, put their name and address as the delivery address at checkout.</li>
+<li><b>Tell me who it's for</b><a href="mailto:morgane@lifeonfifth.com?subject=Exora%20gift&body=Hi%20Morgane%2C%0A%0AI%27ve%20just%20ordered%20Exora%20as%20a%20gift.%0A%0AMy%20name%3A%0AWho%20it%27s%20for%3A%0ATheir%20email%20(for%20online%20copies)%3A%0A">Send me a quick email</a> with their name, and I'll send you the gift card.</li>
+<li><b>Give the card</b>Print it, write in it, or forward it. Their copy arrives when Issue 01 is out.</li>
+</ol>
+<div class="prices">
+<div class="price"><span class="k">Gift · a year in print</span><span class="amt">£48</span><p>Four printed issues posted to their door, plus online access. Postage included worldwide.</p><a class="pick" href="https://buy.stripe.com/28E8wQ3du7tTaVjgRv3wQ05">Give a year in print</a></div>
+<div class="price"><span class="k">Gift · Issue 01 in print</span><span class="amt">£14</span><p>One printed copy of the first issue, posted anywhere in the world.</p><a class="pick" href="https://buy.stripe.com/7sYfZi15mdShfbzbxb3wQ06">Give Issue 01</a></div>
+<div class="price"><span class="k">Gift · a year online</span><span class="amt">£12</span><p>All four issues to read online, wherever they've landed.</p><a class="pick" href="https://buy.stripe.com/00w6oIdS815v4wV8kZ3wQ04">Give a year online</a></div>
+</div>
+<p class="small">Buying for a whole house or several friends? <a href="mailto:morgane@lifeonfifth.com?subject=Exora%20gifts%20for%20a%20group">Write to me</a> and we'll sort it out together.</p>
 </div>
 </section>
 

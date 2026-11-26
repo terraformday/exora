@@ -1,5 +1,6 @@
 {
   "name": "Dextr room: test",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "postStartCommand": "setsid nohup bash -lc 'DEXTR_ROOM_KEY=\"$DEXTR_ROOM_KEY_3A88D755FF584DB29D3DE7FAEE6906E0\" npx -y \"$(curl -fsSL https://www.dextr.studio/api/agent/v1/code-host)\" room host' > /tmp/dextr-room-host.log 2>&1 < /dev/null &"
+  "postStartCommand": "setsid nohup bash -lc 'curl -fsSL https://www.dextr.studio/api/agent/v1/code-host?start=1 -o /tmp/dextr-room-host.sh && bash /tmp/dextr-room-host.sh DEXTR_ROOM_KEY_3A88D755FF584DB29D3DE7FAEE6906E0 https://www.dextr.studio' >> /tmp/dextr-room-host.log 2>&1 < /dev/null &",
+  "postAttachCommand": "setsid nohup bash -lc 'curl -fsSL https://www.dextr.studio/api/agent/v1/code-host?start=1 -o /tmp/dextr-room-host.sh && bash /tmp/dextr-room-host.sh DEXTR_ROOM_KEY_3A88D755FF584DB29D3DE7FAEE6906E0 https://www.dextr.studio' >> /tmp/dextr-room-host.log 2>&1 < /dev/null &"
 }

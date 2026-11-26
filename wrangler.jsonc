@@ -1,0 +1,12 @@
+// Cloudflare Workers hosting for exora (moved from Render, 26 Nov 2026): the repository root is the site, no build step.
+// Workers Builds deploy command: `npx wrangler deploy`. .assetsignore keeps the repo's own files off the site.
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "exora",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": ".",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
